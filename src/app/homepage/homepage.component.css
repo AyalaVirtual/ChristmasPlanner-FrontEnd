@@ -1,0 +1,22 @@
+div {
+    background-image: url("../../assets/images/ChristmasPlannerBackground4.png");
+    background-size: cover;
+    height: 35em;
+    width: auto;
+}
+
+nav {
+    display: flex;
+    padding-top: 120px;
+}
+
+.navlinks {
+    list-style-type: none;
+    justify-content: space-between;
+    padding-left: 75px;
+    padding-bottom: 20px;
+    font-size: 25px;
+    text-align: center;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    
+}
