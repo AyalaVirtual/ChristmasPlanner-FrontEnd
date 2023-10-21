@@ -1,4 +1,4 @@
-div {
+#body {
     background-image: url("../../assets/images/ChristmasPlannerBackground4.png");
     background-size: cover;
     height: 35em;
@@ -7,16 +7,26 @@ div {
 
 nav {
     display: flex;
-    padding-top: 120px;
+    /* padding-top: 135px; */
+    padding-top: 270px;
+    float: right;
 }
 
 .navlinks {
     list-style-type: none;
     justify-content: space-between;
-    padding-left: 75px;
-    padding-bottom: 20px;
-    font-size: 25px;
+    /* padding-left: 75px; */
+    padding-right: 90px;
+    padding-bottom: 12px;
     text-align: center;
+}
+
+button {
+    background-color: rgb(130, 255, 130);
+    padding: 10px;
+    border-radius: 20px;
     font-family: Comic Sans MS, Comic Sans, cursive;
-    
+    font-size: 20px;
+    width: 250px;
+    border-color: green;
 }
