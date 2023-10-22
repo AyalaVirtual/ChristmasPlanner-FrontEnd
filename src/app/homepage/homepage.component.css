@@ -1,5 +1,5 @@
-#body {
-    background-image: url("../../assets/images/ChristmasPlannerBackground4.png");
+#background {
+    background-image: url("../../assets/images/homepage-bg.png");
     background-size: cover;
     height: 35em;
     width: auto;
