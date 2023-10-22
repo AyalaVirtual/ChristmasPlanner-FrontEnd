@@ -1,7 +1,7 @@
 #background {
     background-image: url("../../assets/images/route-bg.png");
     background-size: cover;
-    height: 35em;
+    height: auto;
     width: auto;
 }
 

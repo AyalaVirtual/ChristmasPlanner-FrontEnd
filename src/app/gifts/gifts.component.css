@@ -1,12 +1,46 @@
 #background {
-    background-image: url("../../assets/images/gifts-bg.png");
+    /* background-image: url("../../assets/images/route-bg.png"); */
+    background-image: url("../../assets/images/route-bg.png");
     background-size: cover;
-    height: 35em;
-    width: auto;
+    /* height: auto;
+    width: auto; */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-/* img {
-    height: 600px;
-    width: 600px;
-} */
+.container {
+    position: relative;
+    width: 300px; /* Set the width of the container */
+}
 
+.image {
+    margin-top: 50px;
+    display: block;
+    width: 400%;
+    height: auto;
+}
+
+.text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+    color: black;
+    margin-left: 300px;
+    padding-left: 40px;
+    padding-right: 40px;
+    box-sizing: border-box;
+    margin-top: 200px;
+    padding-bottom: 30px;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+ul {
+    padding-bottom: 20px;
+}
