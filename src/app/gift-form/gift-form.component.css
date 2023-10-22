@@ -1,6 +1,15 @@
-.form-display {
-    height: 700px;
+#form-display {
+    height: 575px;
     width: 500px;
     background-color: hsla(198, 74%, 72%, 0.5);
+    border: 2px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 50px;
 }
 
+.form-content {
+    margin-top: 100px;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    text-align: center;
+}
