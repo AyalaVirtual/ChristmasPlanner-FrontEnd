@@ -16,6 +16,8 @@ import { DecorationPageComponent } from './decoration-page/decoration-page.compo
 import { StockingStufferPageComponent } from './stocking-stuffer-page/stocking-stuffer-page.component';
 import { DecorationFormComponent } from './decoration-form/decoration-form.component';
 import { StockingStufferFormComponent } from './stocking-stuffer-form/stocking-stuffer-form.component';
+import { StockingStufferSearchComponent } from './stocking-stuffer-search/stocking-stuffer-search.component';
+import { DecorationSearchComponent } from './decoration-search/decoration-search.component';
 
 
 @NgModule({
@@ -33,6 +35,8 @@ import { StockingStufferFormComponent } from './stocking-stuffer-form/stocking-s
     StockingStufferPageComponent,
     DecorationFormComponent,
     StockingStufferFormComponent,
+    StockingStufferSearchComponent,
+    DecorationSearchComponent,
   ],
   imports: [
     BrowserModule,
