@@ -6,3 +6,11 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
+app-gifts, app-gift-form {
+    display: inline-block;
+}
+
+app-gift-form {
+    float: right;
+}

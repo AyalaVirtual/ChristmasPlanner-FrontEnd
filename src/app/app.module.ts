@@ -11,6 +11,7 @@ import { SearchComponent } from './search/search.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { GiftPageComponent } from './gift-page/gift-page.component';
+import { GiftFormComponent } from './gift-form/gift-form.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { GiftPageComponent } from './gift-page/gift-page.component';
     NavbarComponent,
     SearchComponent,
     GiftPageComponent,
+    GiftFormComponent,
   ],
   imports: [
     BrowserModule,
