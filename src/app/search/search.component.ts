@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
 import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
 import { GiftService } from '../gifts/gifts.service';
+import { Gift } from '../gift-page/gift-page.component';
 
 
 @Component({
@@ -10,26 +11,26 @@ import { GiftService } from '../gifts/gifts.service';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-  recipient : string = '';
+  input : string = '';
   gift : any = '';
   // This is the observable 
   searchSubject = new Subject();
 
   constructor(private giftService : GiftService) {}
 
-  findGift(recipient : string) : void {
-    // This publishes that something happened (in this case, the event of the findGift() method firing, or receiving the recipient type) 
+  findGift(input : string) : void {
+    // This publishes that something happened (in this case, the event of the findGift() method firing, or receiving the input type) 
     // publishing is a way of communicating information/announcing a change in data 
     // subscribing does something with that data (listens for changes)
     // observables are just a mix of publishing and subscribing  
-    this.searchSubject.next(recipient);
+    this.searchSubject.next(input);
   }
 
   ngOnInit() : void {
     this.searchSubject
     // this is like a setTimeout() method that only sends another request if you search for something different than the previous search 
     .pipe(debounceTime(1000), distinctUntilChanged())
-    .subscribe(recipient => {
+    .subscribe(input => {
       this.giftService.getAllGifts()
       // This means it's listening in for the response ("Subscribe basically used to take some action after event happen. Like if u have used in API call and if u want to perform some action only after response come u can subscribe that call.")
         .subscribe(response => {
