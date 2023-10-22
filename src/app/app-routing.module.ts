@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomepageComponent } from './homepage/homepage.component';
 import { DecorationsComponent } from './decorations/decorations.component';
-import { GiftsComponent } from './gifts/gifts.component';
+import { GiftPageComponent } from './gift-page/gift-page.component';
 import { StockingStuffersComponent } from './stocking-stuffers/stocking-stuffers.component';
+
 
 const routes: Routes = [
   {
@@ -16,7 +17,7 @@ const routes: Routes = [
   },
   {
     path: 'gifts',
-    component: GiftsComponent
+    component: GiftPageComponent
   },
   {
     path: 'stocking-stuffers',

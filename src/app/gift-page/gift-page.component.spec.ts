@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TextComponent } from './text.component';
+import { GiftPageComponent } from './gift-page.component';
 
-describe('TextComponent', () => {
-  let component: TextComponent;
-  let fixture: ComponentFixture<TextComponent>;
+describe('GiftPageComponent', () => {
+  let component: GiftPageComponent;
+  let fixture: ComponentFixture<GiftPageComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TextComponent]
+      declarations: [GiftPageComponent]
     });
-    fixture = TestBed.createComponent(TextComponent);
+    fixture = TestBed.createComponent(GiftPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

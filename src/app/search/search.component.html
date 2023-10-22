@@ -1,0 +1,11 @@
+<section>
+    <h2>Who are you shopping for?</h2>
+    Search String: {{recipient}}
+    <input (keyup)="findGift(recipient)" [(ngModel)]="recipient" type="text" placeholder="Recipient here">
+    <!-- <input (click)="findGifts(recipient)" type="submit" value="Search"> -->
+</section>
+
+<section *ngIf="gift">
+    <h3>Here are gifts for {{gift.recipient}}</h3>
+    <a routerLink="/gifts/:id">{{gift.gift[0].name}}</a>
+</section>

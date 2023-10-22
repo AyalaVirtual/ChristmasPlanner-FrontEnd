@@ -1,22 +1,14 @@
-#background {
-    /* background-image: url("../../assets/images/route-bg.png"); */
-    background-image: url("../../assets/images/route-bg.png");
-    background-size: cover;
-    /* height: auto;
-    width: auto; */
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
 .container {
     position: relative;
     width: 300px; /* Set the width of the container */
+    padding-bottom: 500px;
 }
 
 .image {
     margin-top: 50px;
     display: block;
-    width: 400%;
+    /* width: 400%; */
+    width: 200%;
     height: auto;
 }
 
@@ -24,15 +16,23 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 200%;
+    /* width: 200%; */
+    width: 100%;
     background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
     color: black;
-    margin-left: 300px;
+    /* margin-left: 300px;
     padding-left: 40px;
     padding-right: 40px;
     box-sizing: border-box;
     margin-top: 200px;
-    padding-bottom: 30px;
+    padding-bottom: 30px; */
+    height: auto;
+    box-sizing: border-box;
+    margin-top: 120px;
+    margin-left: 150px;
+    padding-left: 30px;
+    padding-right: 40px;
+    padding-bottom: 200px;
 }
 
 h1 {
@@ -41,6 +41,3 @@ h1 {
     padding-bottom: 20px;
 }
 
-ul {
-    padding-bottom: 20px;
-}

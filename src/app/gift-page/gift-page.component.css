@@ -1,0 +1,8 @@
+#background {
+    background-image: url("../../assets/images/route-bg.png");
+    background-size: cover;
+    /* height: auto;
+    width: auto; */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
