@@ -12,6 +12,10 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { GiftPageComponent } from './gift-page/gift-page.component';
 import { GiftFormComponent } from './gift-form/gift-form.component';
+import { DecorationPageComponent } from './decoration-page/decoration-page.component';
+import { StockingStufferPageComponent } from './stocking-stuffer-page/stocking-stuffer-page.component';
+import { DecorationFormComponent } from './decoration-form/decoration-form.component';
+import { StockingStufferFormComponent } from './stocking-stuffer-form/stocking-stuffer-form.component';
 
 
 @NgModule({
@@ -25,6 +29,10 @@ import { GiftFormComponent } from './gift-form/gift-form.component';
     SearchComponent,
     GiftPageComponent,
     GiftFormComponent,
+    DecorationPageComponent,
+    StockingStufferPageComponent,
+    DecorationFormComponent,
+    StockingStufferFormComponent,
   ],
   imports: [
     BrowserModule,

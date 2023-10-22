@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomepageComponent } from './homepage/homepage.component';
-import { DecorationsComponent } from './decorations/decorations.component';
 import { GiftPageComponent } from './gift-page/gift-page.component';
-import { StockingStuffersComponent } from './stocking-stuffers/stocking-stuffers.component';
+import { DecorationPageComponent } from './decoration-page/decoration-page.component';
+import { StockingStufferPageComponent } from './stocking-stuffer-page/stocking-stuffer-page.component';
 
 
 const routes: Routes = [
@@ -13,7 +13,7 @@ const routes: Routes = [
   },
   {
     path: 'decorations',
-    component: DecorationsComponent
+    component: DecorationPageComponent
   },
   {
     path: 'gifts',
@@ -21,7 +21,7 @@ const routes: Routes = [
   },
   {
     path: 'stocking-stuffers',
-    component: StockingStuffersComponent
+    component: StockingStufferPageComponent
   }
 ];
 

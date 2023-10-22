@@ -27,7 +27,7 @@ input, textarea {
     width: 300px;
 }
 
-#description {
+#materials, #directions {
     height: 200px;
     width: 400px;
     padding-bottom: 50px;
