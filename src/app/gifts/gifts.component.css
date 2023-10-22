@@ -1,7 +1,7 @@
 .container {
     position: relative;
     width: 300px; /* Set the width of the container */
-    padding-bottom: 500px;
+    padding-bottom: 200px;
 }
 
 .image {
