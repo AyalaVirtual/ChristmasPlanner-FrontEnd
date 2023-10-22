@@ -7,6 +7,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { DecorationsComponent } from './decorations/decorations.component';
 import { GiftsComponent } from './gifts/gifts.component';
 import { StockingStuffersComponent } from './stocking-stuffers/stocking-stuffers.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { StockingStuffersComponent } from './stocking-stuffers/stocking-stuffers
     HomepageComponent,
     DecorationsComponent,
     GiftsComponent,
-    StockingStuffersComponent
+    StockingStuffersComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
