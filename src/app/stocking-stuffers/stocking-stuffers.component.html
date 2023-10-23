@@ -3,15 +3,13 @@
     
 
     <div class="text">
-        <h2 id="name">Homemade Peppermint Bark</h2>
-
-        <h3>Description:</h3>
-        <div class="description">
-            <p>
-                Create a delicious peppermint bark with layers of dark and white chocolate, sprinkled with crushed candy canes. 
-                Package it in festive tins or bags.
-            </p>
-        </div>
+        <ul>
+            <li *ngFor="let stockingStuffer of stockingStuffers">
+                <a routerLink="stocking-stuffer-item">{{stockingStuffer.name}}</a>
+            </li>
+        </ul>       
     </div>
 </div>
+
+<router-outlet></router-outlet>
 

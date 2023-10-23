@@ -3,15 +3,13 @@
     
 
     <div class="text">
-        <h2 id="name">Homemade Scented Holiday Candles</h2>
-
-        <h3>Description:</h3>
-        <div class="description">
-            <p>
-                Craft scented candles with festive holiday scents like cinnamon, pine, and peppermint. 
-                Add a personal touch with custom labels.
-            </p>
-        </div>
+        <ul>
+            <li *ngFor="let gift of gifts">
+                <a routerLink="gift-item">{{gift.name}}</a>
+            </li>
+        </ul>       
     </div>
 </div>
+
+<router-outlet></router-outlet>
 
