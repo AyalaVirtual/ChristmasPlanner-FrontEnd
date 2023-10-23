@@ -18,9 +18,11 @@ export class StockingStuffersComponent implements OnInit {
 
   ngOnInit(): void {
     this.stockingStuffersService.getAllStockingStuffers().subscribe(
-      (data : any) => {
+      (response : any) => {
         // This assigns the retrieved data to the component property 
-        this.stockingStuffers = data;
+        this.stockingStuffers = response;
+        // Remove this in production 
+        console.log(response);
       }
     )
   };

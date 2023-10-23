@@ -18,9 +18,11 @@ export class GiftsComponent implements OnInit {
 
   ngOnInit(): void {
     this.giftService.getAllGifts().subscribe(
-      (data : any) => {
+      (response : any) => {
         // This assigns the retrieved data to the component property 
-        this.gifts = data;
+        this.gifts = response;
+        // Remove this in production 
+        console.log(response);
       }
     )
   };

@@ -18,9 +18,11 @@ export class DecorationsComponent implements OnInit {
 
   ngOnInit(): void {
     this.decorationService.getAllDecorations().subscribe(
-      (data : any) => {
+      (response : any) => {
         // This assigns the retrieved data to the component property 
-        this.decorations = data;
+        this.decorations = response;
+        // Remove this in production 
+        console.log(response);
       }
     )
   };

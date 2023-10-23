@@ -11,18 +11,16 @@ import { Gift } from '../gift-page/gift-page.component';
   styleUrls: ['./gift-search.component.css']
 })
 export class GiftSearchComponent implements OnInit {
-  input : string = '';
-  gift : any = '';
+  tag : string = '';
   // This is the observable 
   searchSubject = new Subject();
 
+
   constructor(private giftService : GiftService) {}
 
-  findGift(input : string) : void {
-    // This publishes that something happened (in this case, the event of the findGift() method firing, or receiving the input type) 
-    // publishing is a way of communicating information/announcing a change in data 
-    // subscribing does something with that data (listens for changes)
-    // observables are just a mix of publishing and subscribing  
+
+  findGiftByTag(input : string) : void {
+    // This publishes that something happened (in this case, the event of the findGift() method firing, or receiving the input type)  
     this.searchSubject.next(input);
   }
 
@@ -32,7 +30,7 @@ export class GiftSearchComponent implements OnInit {
     .pipe(debounceTime(1000), distinctUntilChanged())
     .subscribe(input => {
       this.giftService.getAllGifts()
-      // This means it's listening in for the response ("Subscribe basically used to take some action after event happen. Like if u have used in API call and if u want to perform some action only after response come u can subscribe that call.")
+      // This means it's listening in for the response 
         .subscribe(response => {
           // Remove this in production 
           console.log(response)
