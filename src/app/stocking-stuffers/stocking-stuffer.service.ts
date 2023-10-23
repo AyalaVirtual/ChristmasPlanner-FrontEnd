@@ -21,19 +21,19 @@ export class StockingStuffersService {
   constructor(private http : HttpClient) { }
 
   getAllStockingStuffers() {
-    return this.http.get(`${this.apiUrl}/stockingstuffers`);
+    return this.http.get(`${this.apiUrl}/stockingstuffers/`);
   }
 
   getStockingStufferById(stockingStufferId : number) {
-    return this.http.get(`${this.apiUrl}/stockingstuffers/{stockingStufferId}`);
+    return this.http.get(`${this.apiUrl}/stockingstuffers/{stockingStufferId}/`);
   }
 
   createStockingStuffer(stockingStuffer : any) {
-    return this.http.post(`${this.apiUrl}/stockingstuffers`, stockingStuffer);
+    return this.http.post(`${this.apiUrl}/stockingstuffers/`, stockingStuffer);
   }
 
   updateStockingStuffer(stockingStufferId : number, stockingStuffer : any) {
-    return this.http.put(`${this.apiUrl}/stockingstuffers`, stockingStuffer)
+    return this.http.put(`${this.apiUrl}/stockingstuffers/`, stockingStuffer)
   }
 
 }

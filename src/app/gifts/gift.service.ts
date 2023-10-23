@@ -21,19 +21,19 @@ export class GiftService {
   constructor(private http : HttpClient) { }
 
   getAllGifts() {
-    return this.http.get(`${this.apiUrl}/gifts`);
+    return this.http.get(`${this.apiUrl}/gifts/`);
   }
 
   getGiftById(giftId : number) {
-    return this.http.get(`${this.apiUrl}/gifts/{giftId}`);
+    return this.http.get(`${this.apiUrl}/gifts/{giftId}/`);
   }
 
   createGift(gift : any) {
-    return this.http.post(`${this.apiUrl}/gifts`, gift);
+    return this.http.post(`${this.apiUrl}/gifts/`, gift);
   }
 
   updateGift(giftId : number, gift : any) {
-    return this.http.put(`${this.apiUrl}/gifts`, gift)
+    return this.http.put(`${this.apiUrl}/gifts/`, gift)
   }
 
 }
