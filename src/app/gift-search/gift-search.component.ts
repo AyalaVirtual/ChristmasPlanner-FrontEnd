@@ -11,7 +11,9 @@ import { Gift } from '../gift-page/gift-page.component';
   styleUrls: ['./gift-search.component.css']
 })
 export class GiftSearchComponent implements OnInit {
-  tag : string = '';
+  input : string = '';
+  gift : any = '';
+
   // This is the observable 
   searchSubject = new Subject();
 
@@ -22,6 +24,10 @@ export class GiftSearchComponent implements OnInit {
   findGiftByTag(input : string) : void {
     // This publishes that something happened (in this case, the event of the findGift() method firing, or receiving the input type)  
     this.searchSubject.next(input);
+
+    /* if (this.stockingStuffer.tag.includes(this.searchSubject.next(input))) {
+          return this.stockingStuffer;
+    } */
   }
 
   ngOnInit() : void {

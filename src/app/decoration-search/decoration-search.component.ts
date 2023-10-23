@@ -13,6 +13,7 @@ import { Decoration } from '../decoration-page/decoration-page.component';
 export class DecorationSearchComponent implements OnInit {
   input : string = '';
   decoration : any = '';
+
   // This is the observable 
   searchSubject = new Subject();
 
@@ -20,9 +21,6 @@ export class DecorationSearchComponent implements OnInit {
 
   findDecoration(input : string) : void {
     // This publishes that something happened (in this case, the event of the findDecoration() method firing, or receiving the input type) 
-    // publishing is a way of communicating information/announcing a change in data 
-    // subscribing does something with that data (listens for changes)
-    // observables are just a mix of publishing and subscribing  
     this.searchSubject.next(input);
   }
 
@@ -32,7 +30,7 @@ export class DecorationSearchComponent implements OnInit {
     .pipe(debounceTime(1000), distinctUntilChanged())
     .subscribe(input => {
       this.decorationService.getAllDecorations()
-      // This means it's listening in for the response ("Subscribe basically used to take some action after event happen. Like if u have used in API call and if u want to perform some action only after response come u can subscribe that call.")
+      // This means it's listening in for the response 
         .subscribe(response => {
           // Remove this in production 
           console.log(response)

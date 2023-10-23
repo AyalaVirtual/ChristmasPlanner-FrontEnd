@@ -12,6 +12,8 @@ import { StockingStuffer } from '../stocking-stuffer-page/stocking-stuffer-page.
 })
 export class StockingStufferSearchComponent implements OnInit {
   input : string = '';
+  stockingStuffer : any = '';
+
   // This is the observable 
   searchSubject = new Subject();
 
@@ -22,6 +24,10 @@ export class StockingStufferSearchComponent implements OnInit {
   findStockingStufferByTag(input : string) : void {
     // This publishes that something happened (in this case, the event of the findStockingStuffer() method firing, or receiving the input type) 
     this.searchSubject.next(input);
+
+    /* if (this.stockingStuffer.tag.includes(this.searchSubject.next(input))) {
+          return this.stockingStuffer;
+    } */
   }
 
   ngOnInit() : void {

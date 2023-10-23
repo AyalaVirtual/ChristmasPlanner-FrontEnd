@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { DecorationSearchComponent } from './decoration-search.component';
 
 describe('DecorationSearchComponent', () => {
