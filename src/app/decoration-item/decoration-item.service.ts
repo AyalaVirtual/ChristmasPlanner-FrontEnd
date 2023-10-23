@@ -7,7 +7,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class DecorationService {
+export class DecorationItemService {
     // This variable points to the Spring Boot API's URL and is where the Angular front-end will send HTTP requests to interact with the back-end 
     private apiUrl : string = 'http://localhost:9092/api';
 
@@ -20,9 +20,10 @@ export class DecorationService {
 
   constructor(private http : HttpClient) { }
 
-  getAllDecorations() {
-    return this.http.get(`${this.apiUrl}/decorations/`);
-  }
 
+  getDecorationById(decorationId : number) {
+    return this.http.get(`${this.apiUrl}/decorations/{decorationId}/`);
+  }
+  
 
 }
