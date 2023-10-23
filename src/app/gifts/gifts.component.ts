@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Gift } from '../gift-page/gift-page.component';
+import { GiftService } from './gift.service';
 
 
 @Component({
@@ -7,7 +8,21 @@ import { Gift } from '../gift-page/gift-page.component';
   templateUrl: './gifts.component.html',
   styleUrls: ['./gifts.component.css']
 })
-export class GiftsComponent {
-  @Input() public gifts : Gift[] = [];
+export class GiftsComponent implements OnInit {
+  // This declares a property to store gifts 
+  gifts : any[] = [];
+
+
+  constructor(private giftService : GiftService) {}
+
+
+  ngOnInit(): void {
+    this.giftService.getAllGifts().subscribe(
+      (data : any) => {
+        // This assigns the retrieved data to the component property 
+        this.gifts = data;
+      }
+    )
+  };
 
 }
