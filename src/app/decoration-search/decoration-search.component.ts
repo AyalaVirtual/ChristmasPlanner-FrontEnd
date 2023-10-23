@@ -22,6 +22,10 @@ export class DecorationSearchComponent implements OnInit {
   findDecoration(input : string) : void {
     // This publishes that something happened (in this case, the event of the findDecoration() method firing, or receiving the input type) 
     this.searchSubject.next(input);
+
+    /* if (this.decoration.name === this.searchSubject.next(input)) {
+          return this.decoration;
+    } */
   }
 
   ngOnInit() : void {

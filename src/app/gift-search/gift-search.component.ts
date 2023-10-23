@@ -25,8 +25,8 @@ export class GiftSearchComponent implements OnInit {
     // This publishes that something happened (in this case, the event of the findGift() method firing, or receiving the input type)  
     this.searchSubject.next(input);
 
-    /* if (this.stockingStuffer.tag.includes(this.searchSubject.next(input))) {
-          return this.stockingStuffer;
+    /* if (this.gift.tag.includes(this.searchSubject.next(input))) {
+          return this.gift;
     } */
   }
 
