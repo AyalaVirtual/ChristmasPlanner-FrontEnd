@@ -7,7 +7,7 @@
 .image {
     margin-top: 50px;
     display: block;
-    width: 270%;
+    width: 300%;
     /* height: auto; */
     height: 1200px;
 }
@@ -16,16 +16,16 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 130%;
+    width: 145%;
     background-color: hsla(40, 33%, 82%, 0.5); /* Semi-transparent background */
     color: black;
     height: auto;
     box-sizing: border-box;
-    margin-top: 220px;
-    margin-left: 210px;
+    margin-top: 230px;
+    margin-left: 230px;
     padding-left: 25px;
     padding-right: 25px;
-    padding-bottom: 65px;
+    padding-bottom: 75px;
     text-align: justify;
 }
 
