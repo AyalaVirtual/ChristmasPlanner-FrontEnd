@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
 import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
 import { DecorationService } from '../decorations/decoration.service';
-import { Decoration } from '../decoration-page/decoration-page.component';
+import { Decoration } from '../decorations/decorations.component';
 
 
 @Component({

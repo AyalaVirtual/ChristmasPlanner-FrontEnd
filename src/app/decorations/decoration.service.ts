@@ -21,20 +21,20 @@ export class DecorationService {
   constructor(private http : HttpClient) { }
 
   getAllDecorations() {
-    return this.http.get(`${this.apiUrl}/decorations`);
+    return this.http.get(`${this.apiUrl}/decorations/`);
   }
 
   getDecorationById(decorationId : number) {
-    return this.http.get(`${this.apiUrl}/decorations/{decorationId}`);
+    return this.http.get(`${this.apiUrl}/decorations/{decorationId}/`);
   }
   
 
   createDecoration(decoration : any) {
-    return this.http.post(`${this.apiUrl}/decorations`, decoration);
+    return this.http.post(`${this.apiUrl}/decorations/`, decoration);
   }
 
   updateDecoration(decorationId : number, decoration : any) {
-    return this.http.put(`${this.apiUrl}/decorations`, decoration)
+    return this.http.put(`${this.apiUrl}/decorations/`, decoration)
   }
 
 }

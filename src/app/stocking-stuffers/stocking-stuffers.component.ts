@@ -1,6 +1,12 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { StockingStuffer } from '../stocking-stuffer-page/stocking-stuffer-page.component';
 import { StockingStuffersService } from './stocking-stuffer.service';
+
+
+export type StockingStuffer = {
+  name : String;
+  description : String;
+  tag : String;
+ }
 
 
 @Component({
@@ -20,9 +26,9 @@ export class StockingStuffersComponent implements OnInit {
     this.stockingStuffersService.getAllStockingStuffers().subscribe(
       (response : any) => {
         // This assigns the retrieved data to the component property 
-        this.stockingStuffers = response;
+        this.stockingStuffers = response.data;
         // Remove this in production 
-        console.log(response);
+        console.log(response.data);
       }
     )
   };

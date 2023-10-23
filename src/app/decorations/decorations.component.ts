@@ -1,6 +1,12 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Decoration } from '../decoration-page/decoration-page.component';
 import { DecorationService } from './decoration.service';
+
+
+export type Decoration = {
+  name : String;
+  materials : String;
+  directions : String;
+ }
 
 
 @Component({
@@ -22,9 +28,9 @@ export class DecorationsComponent implements OnInit {
     this.decorationService.getAllDecorations().subscribe(
       (response : any) => {
         // This assigns the retrieved data to the component property 
-        this.decorations = response;
+        this.decorations = response.data;
         // Remove this in production 
-        console.log(response);
+        console.log(response.data);
       }
     )
   };
