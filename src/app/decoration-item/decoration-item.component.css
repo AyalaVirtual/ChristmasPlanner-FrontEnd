@@ -1,6 +1,6 @@
 .container {
     position: relative;
-    width: 300px;
+    width: 300px; /* Set the width of the container */
     padding-bottom: 200px;
 }
 
