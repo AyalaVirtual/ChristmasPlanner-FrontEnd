@@ -1,0 +1,44 @@
+#form-display {
+    height: 700px;
+    width: 470px;
+    background-color: hsla(198, 74%, 72%, 0.5);
+    border: 2px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 50px;
+}
+
+.form-content {
+    margin-top: 80px;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+input, textarea {
+    height: 30px;
+    width: 300px;
+    margin-top: 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+}
+
+#name {
+    width: 300px;
+}
+
+#description {
+    height: 200px;
+    width: 400px;
+    padding-bottom: 50px;
+}
+
+#submit {
+    background-color: red;
+    color: white;
+    height: 35px;
+    width: 200px;
+    margin-left: 2px;
+}

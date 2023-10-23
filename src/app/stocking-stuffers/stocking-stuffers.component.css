@@ -1,8 +1,42 @@
-#background {
-    background-image: url("../../assets/images/route-bg.png");
-    background-size: cover;
-    /* height: auto;
-    width: auto; */
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+.container {
+    position: relative;
+    width: 300px; /* Set the width of the container */
+    padding-bottom: 200px;
 }
+
+.image {
+    margin-top: 50px;
+    display: block;
+    /* width: 230%; */
+    width: 1500px;
+    /* height: auto; */
+    height: 1400px;
+}
+
+.text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110%;
+    background-color: hsla(110, 19%, 50%, 0.5); /* Semi-transparent background */
+    color: black;
+    height: auto;
+    box-sizing: border-box;
+    margin-top: 750px;
+    margin-left: 305px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 65px;
+    text-align: justify;
+}
+
+#name {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+h2, h3, p {
+    font-family: Comic Sans MS, Comic Sans, cursive;
+}
+

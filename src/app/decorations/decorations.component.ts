@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Decoration } from '../decoration-page/decoration-page.component';
+
 
 @Component({
   selector: 'app-decorations',
@@ -6,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./decorations.component.css']
 })
 export class DecorationsComponent {
-
+  @Input() public decorations : Decoration[] = [];
 }

@@ -1,1 +1,15 @@
-<p>stocking-stuffer-search works!</p>
+<section>
+    <h2>Get Stocking Stuffer Ideas</h2>
+    {{input}}
+    <input (keyup)="findStockingStuffer(input)" [(ngModel)]="input" type="text" placeholder="Enter text here">
+    <input (click)="findStockingStuffer(input)" type="submit" value="Search" id="submit">
+</section>
+
+<a href="" id="browse-all">
+    <button>Browse All</button>
+</a>
+
+<section *ngIf="stockingStuffer">
+    <h3>{{stockingStuffer.input}}</h3>
+    <a routerLink="/stockingstuffers/:id">{{stockingStuffer.stockingStuffer[0].name}}</a>
+</section>

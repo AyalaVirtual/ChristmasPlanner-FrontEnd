@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
 import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
-import { GiftService } from '../gifts/gifts.service';
+import { GiftService } from '../gifts/gift.service';
 import { Gift } from '../gift-page/gift-page.component';
 
 
 @Component({
   selector: 'app-search',
-  templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css']
+  templateUrl: './gift-search.component.html',
+  styleUrls: ['./gift-search.component.css']
 })
-export class SearchComponent implements OnInit {
+export class GiftSearchComponent implements OnInit {
   input : string = '';
   gift : any = '';
   // This is the observable 
