@@ -21,6 +21,7 @@ import { DecorationSearchComponent } from './decoration-search/decoration-search
 import { GiftItemComponent } from './gift-item/gift-item.component';
 import { StockingStufferItemComponent } from './stocking-stuffer-item/stocking-stuffer-item.component';
 import { DecorationItemComponent } from './decoration-item/decoration-item.component';
+import { DecorationsRoutingModule } from './decorations/decorations.routing.module';
 
 
 @NgModule({
@@ -49,6 +50,8 @@ import { DecorationItemComponent } from './decoration-item/decoration-item.compo
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    DecorationsRoutingModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
