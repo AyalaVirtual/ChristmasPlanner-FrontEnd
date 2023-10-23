@@ -22,6 +22,7 @@ import { GiftItemComponent } from './gift-item/gift-item.component';
 import { StockingStufferItemComponent } from './stocking-stuffer-item/stocking-stuffer-item.component';
 import { DecorationItemComponent } from './decoration-item/decoration-item.component';
 import { DecorationsRoutingModule } from './decorations/decorations.routing.module';
+import { GiftsRoutingModule } from './gifts/gifts.routing.module';
 
 
 @NgModule({
@@ -51,6 +52,7 @@ import { DecorationsRoutingModule } from './decorations/decorations.routing.modu
     FormsModule,
     HttpClientModule,
     DecorationsRoutingModule,
+    GiftsRoutingModule,
     
   ],
   providers: [],
