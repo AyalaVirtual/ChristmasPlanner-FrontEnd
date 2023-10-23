@@ -5,24 +5,24 @@
 }
 
 .image {
-    margin-top: 50px;
+    margin-top: 70px;
     display: block;
-    width: 230%;
+    width: 240%;
     /* height: auto; */
-    height: 1000px;
+    height: 1100px;
 }
 
 .text {
     position: absolute;
     top: 0;
     left: 0;
-    width: 115%;
-    background-color: hsla(40, 33%, 82%, 0.5); /* Semi-transparent background */
+    width: 120%;
+    background-color: hsla(40, 60%, 70%, 0.7); /* Semi-transparent background */
     color: black;
     height: auto;
     box-sizing: border-box;
-    margin-top: 175px;
-    margin-left: 170px;
+    margin-top: 630px;
+    margin-left: 180px;
     padding-left: 25px;
     padding-right: 25px;
     padding-bottom: 65px;
