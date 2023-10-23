@@ -7,22 +7,22 @@
 .image {
     margin-top: 50px;
     display: block;
-    width: 230%;
+    width: 270%;
     /* height: auto; */
-    height: 1000px;
+    height: 1200px;
 }
 
 .text {
     position: absolute;
     top: 0;
     left: 0;
-    width: 115%;
+    width: 130%;
     background-color: hsla(40, 33%, 82%, 0.5); /* Semi-transparent background */
     color: black;
     height: auto;
     box-sizing: border-box;
-    margin-top: 175px;
-    margin-left: 170px;
+    margin-top: 220px;
+    margin-left: 210px;
     padding-left: 25px;
     padding-right: 25px;
     padding-bottom: 65px;
