@@ -2,6 +2,7 @@ nav {
     display: flex;
     padding-top: 20px;
     background-image: url("/../../assets/images/garland.png");
+    margin-bottom: 85px;
 }
 
 #logo {

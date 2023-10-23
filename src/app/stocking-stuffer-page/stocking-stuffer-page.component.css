@@ -1,6 +1,7 @@
 #background {
     background-image: url("../../assets/images/bg.png");
     background-size: cover;
+    overflow: hidden;
     /* height: auto;
     width: auto; */
     background-repeat: no-repeat;
