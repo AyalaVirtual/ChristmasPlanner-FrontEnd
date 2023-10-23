@@ -11,6 +11,8 @@ import { DecorationService } from './decoration.service';
 export class DecorationsComponent implements OnInit {
   // This declares a property to store decorations 
   decorations : any[] = [];
+  
+
 
 
   constructor(private decorationService : DecorationService) {}
@@ -26,5 +28,15 @@ export class DecorationsComponent implements OnInit {
       }
     )
   };
+
+  // this.decorationService.getDecorationById().subscribe(
+  //     (response : any) => {
+  //       // This assigns the retrieved data to the component property 
+  //       this.decoration = response;
+  //       // Remove this in production 
+  //       console.log(response);
+  //     }
+  //   )
+  // };
 
 }

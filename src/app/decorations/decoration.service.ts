@@ -30,7 +30,6 @@ export class DecorationService {
   
 
   createDecoration(decoration : any) {
-
     return this.http.post(`${this.apiUrl}/decorations`, decoration);
   }
 
