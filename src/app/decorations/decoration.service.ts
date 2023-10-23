@@ -21,11 +21,11 @@ export class DecorationService {
   }
 
   createDecoration(decoration : any) {
-    return this.http.get(`${this.apiUrl}/decorations`, decoration);
+    return this.http.post(`${this.apiUrl}/decorations`, decoration);
   }
 
   updateDecoration(decorationId : number, decoration : any) {
-    return this.http.get(`${this.apiUrl}/decorations`, decoration)
+    return this.http.put(`${this.apiUrl}/decorations`, decoration)
   }
 
 }

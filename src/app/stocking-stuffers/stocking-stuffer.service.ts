@@ -21,11 +21,11 @@ export class StockingStuffersService {
   }
 
   createStockingStuffer(stockingStuffer : any) {
-    return this.http.get(`${this.apiUrl}/stockingstuffers`, stockingStuffer);
+    return this.http.post(`${this.apiUrl}/stockingstuffers`, stockingStuffer);
   }
 
   updateStockingStuffer(stockingStufferId : number, stockingStuffer : any) {
-    return this.http.get(`${this.apiUrl}/stockingstuffers`, stockingStuffer)
+    return this.http.put(`${this.apiUrl}/stockingstuffers`, stockingStuffer)
   }
 
 }
