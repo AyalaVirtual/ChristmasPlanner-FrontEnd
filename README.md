@@ -24,13 +24,13 @@ I started off by creating my user stories and acceptance criteria. This helped m
 
 For the final step of the planning phase, I created an ERD (entity relationship diagram) to plan my different models and their relevant attributes. This helped me to visualize their individual tables and corresponding attributes in the database. 
 
-Then, I built the back-end of the app, using Java, the Spring framework, and H2 Database to create a REST API. Finally, I did my API testing using both MockMVC and REST-Assured / Cucumber before moving on to create the front-end of the app. 
+Then, I built the back-end of the app, using Java, the Spring framework, and H2 Database to create a REST API. Finally, I did my API testing using MockMVC before moving on to create the front-end of the app. 
 
 
 
 ## Entity Relationship Diagram
 
-<img src="./src/assets/images/ChristmasPlannerERD.png" alt="ERD">
+<img src="src/assets/images/ERD.png" alt="ERD">
 
 
 
@@ -189,7 +189,7 @@ The biggest hurdle was figuring out how to link the front-end (Angular) to the b
 
 * User Stories - https://docs.google.com/document/d/1JO308vvk7BKkmmwOgG62_AT4C6tBEFypRaw2r9NPWPM/edit?usp=share_link
 
-* API endpoints spreadsheet - https://docs.google.com/spreadsheets/d/12RVyZPDAlmanUx-98VLKu9mCzgStWquStDJq75A0pes/edit?usp=sharing
+* API Endpoints Spreadsheet - https://docs.google.com/spreadsheets/d/12RVyZPDAlmanUx-98VLKu9mCzgStWquStDJq75A0pes/edit?usp=sharing
 
 * ERD (entity relationship diagram) - https://lucid.app/lucidchart/3af0981c-1f3f-40a1-b08e-08b9ec132565/edit?viewport_loc=-571%2C-19%2C3437%2C1426%2C0_0&invitationId=inv_71e906c4-a567-48ff-9051-3689be6f57a8
 
