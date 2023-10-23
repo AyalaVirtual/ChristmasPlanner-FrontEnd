@@ -23,6 +23,7 @@ import { StockingStufferItemComponent } from './stocking-stuffer-item/stocking-s
 import { DecorationItemComponent } from './decoration-item/decoration-item.component';
 import { DecorationsRoutingModule } from './decorations/decorations.routing.module';
 import { GiftsRoutingModule } from './gifts/gifts.routing.module';
+import { StockingStuffersRoutingModule } from './stocking-stuffers/stocking-stuffers.routing.module';
 
 
 @NgModule({
@@ -53,7 +54,7 @@ import { GiftsRoutingModule } from './gifts/gifts.routing.module';
     HttpClientModule,
     DecorationsRoutingModule,
     GiftsRoutingModule,
-    
+    StockingStuffersRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
