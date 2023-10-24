@@ -22,7 +22,7 @@
 }
 
 .text {
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
     width: 120%;
@@ -30,8 +30,8 @@
     color: black;
     height: auto;
     box-sizing: border-box;
-    margin-top: 630px;
     margin-left: 180px;
+    margin-top: 600px;
     padding-left: 25px;
     padding-right: 25px;
     padding-bottom: 65px;
