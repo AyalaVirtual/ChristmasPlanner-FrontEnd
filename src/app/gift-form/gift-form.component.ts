@@ -1,4 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { GiftFormService } from './gift-form.service';
+import { ActivatedRoute } from '@angular/router';
+import { GiftService } from '../gifts/gift.service';
+
+
 
 @Component({
   selector: 'app-gift-form',
