@@ -17,7 +17,7 @@ export type Decoration = {
   templateUrl: './decoration-form.component.html',
   styleUrls: ['./decoration-form.component.css']
 })
-export class DecorationFormComponent /* implements OnInit */ {
+export class DecorationFormComponent {
   // This declares a property to store a newly created decoration 
   @Input() decorations : Decoration[] = [];
   @Output() decorationCreated: EventEmitter<Decoration> = new EventEmitter<Decoration>(); // Define an Output property
