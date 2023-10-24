@@ -1,3 +1,12 @@
+#background {
+    background-image: url("../../assets/images/bg.png");
+    background-size: cover;
+    /* height: auto;
+    width: auto; */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 .container {
     position: relative;
     width: 300px; /* Set the width of the container */

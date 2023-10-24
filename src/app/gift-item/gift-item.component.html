@@ -1,18 +1,21 @@
-<div class="container">
-    <img src="../../assets/images/gifts-bg.png" alt="Santa's Gift List" class="image">
+<div id="background">
+    <app-navbar></app-navbar>
     
+    <div class="container">
+        <img src="../../assets/images/gifts-bg.png" alt="Santa's Gift List" class="image">
+        
 
-    <div class="text">
-        <h2 id="name">
-            {{giftItem.name}}
-        </h2>
+        <div class="text">
+            <h2 id="name">
+                {{giftItem.name}}
+            </h2>
 
-        <h3>Description:</h3>
-        <div class="description">
-            <p>
-                {{giftItem.description}}
-            </p>
+            <h3>Description:</h3>
+            <div class="description">
+                <p>
+                    {{giftItem.description}}
+                </p>
+            </div>
         </div>
     </div>
 </div>
-

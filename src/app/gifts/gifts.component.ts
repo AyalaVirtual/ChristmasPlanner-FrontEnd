@@ -28,8 +28,6 @@ export class GiftsComponent implements OnInit {
       (response : any) => {
         // This assigns the retrieved data to the component property 
         this.gifts = response.data;
-        // Remove this in production 
-        console.log(response.data);
       }
     )
   };

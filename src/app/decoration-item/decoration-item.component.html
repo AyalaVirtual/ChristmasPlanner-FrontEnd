@@ -1,23 +1,26 @@
-<div class="container">
-    <img src="../../assets/images/decorations-bg.png" alt="DIY Holiday Decorations" class="image">
+<div id="background"> 
+   <app-navbar></app-navbar>
 
-    <div class="text" *ngIf="decorationItem">
-        <h2 id="name">
-            {{decorationItem.name}}
-        </h2>
-        
-        <h3>Materials:</h3>
-        <div class="materials" *ngIf="decorationItem">
-            <p id="materialsDisplay">
-                {{decorationItem.materials}}
+    <div class="container">
+        <img src="../../assets/images/decorations-bg.png" alt="DIY Holiday Decorations" class="image">
+
+        <div class="text" *ngIf="decorationItem">
+            <h2 id="name">
+                {{decorationItem.name}}
+            </h2>
+            
+            <h3>Materials:</h3>
+            <div class="materials" *ngIf="decorationItem">
+                <p id="materialsDisplay">
+                    {{decorationItem.materials}}
+                </p>
+            </div>
+            
+
+            <h3>Directions:</h3>
+            <p class="directionsDisplay">
+                {{decorationItem.directions}}
             </p>
         </div>
-        
-
-        <h3>Directions:</h3>
-        <p class="directionsDisplay">
-            {{decorationItem.directions}}
-        </p>
     </div>
-</div>
-
+</div>  
