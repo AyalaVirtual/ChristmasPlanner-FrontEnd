@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 // Any time HTTP is used, this must be imported 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Subject } from 'rxjs';
 
 
 // This means the app is already aware of it, so it's already available 
@@ -18,11 +19,19 @@ export class DecorationService {
     };
 
 
-  constructor(private http : HttpClient) { }
+    private decorationCreatedSource = new Subject<void>();
+    decorationCreated$ = this.decorationCreatedSource.asObservable();
 
-  getAllDecorations() {
-    return this.http.get(`${this.apiUrl}/decorations/`);
-  }
+    decorationCreated() {
+      console.log('decorationCreated called');
+      this.decorationCreatedSource.next();
+    }
 
+
+    constructor(private http : HttpClient) { }
+
+    getAllDecorations() {
+      return this.http.get(`${this.apiUrl}/decorations/`);
+    }
 
 }

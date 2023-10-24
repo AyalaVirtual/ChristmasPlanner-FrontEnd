@@ -20,19 +20,24 @@ export class DecorationsComponent implements OnInit {
   decorations : any[] = [];
   
 
-
-
   constructor(private decorationService : DecorationService) {}
 
 
   ngOnInit(): void {
+    this.fetchDecorations();
+
+    this.decorationService.decorationCreated$.subscribe(() => {
+      this.fetchDecorations();
+    });
+  }
+
+  fetchDecorations(): void {
     this.decorationService.getAllDecorations().subscribe(
       (response : any) => {
-        // This assigns the retrieved data to the component property 
         this.decorations = response.data;
       }
     )
-  };
+  }
 
 
 }

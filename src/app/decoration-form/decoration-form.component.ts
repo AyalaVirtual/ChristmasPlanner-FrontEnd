@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { DecorationFormService } from './decoration-form.service';
 import { ActivatedRoute } from '@angular/router';
+import { DecorationService } from '../decorations/decoration.service';
 
 
 export type Decoration = {
@@ -24,48 +25,14 @@ export class DecorationFormComponent /* implements OnInit */ {
   isUpdate: boolean = false;
   
 
-  constructor(private route : ActivatedRoute, private decorationFormService : DecorationFormService) {
-      // this.id = +this.route.snapshot.paramMap.get('id') || 0;
-      // this.isUpdate = this.id !== 0;
+  constructor(private route : ActivatedRoute, private decorationFormService : DecorationFormService, private decorationService : DecorationService) {
       this.decoration = { name: '', materials: '', directions: '' };
-  }
-
-
-  // ngOnInit() {
-  //   this.route.paramMap.subscribe((params) => {
-  //     const id = params.get('id');
-
-  //     // This says that if there's an 'id', then it's an update operation
-  //     if (id) {
-  //       this.id = id ? +id : undefined;
-  //       this.isUpdate = true;
-  //     }
-  //   })
-  // }
-
-
-  // Method to handle both create and update
-  saveDecoration(decorationData: any) {
-
-    // if (this.isUpdate) {
-    //   // Update an existing decoration
-    //   this.decorationFormService.updateDecoration(this.decoration.id, decorationData).subscribe((response) => {
-    //     console.log('Decoration updated:', response);
-    //   });
-
-    // } else {
-
-      // Create a new decoration
-      this.decorationFormService.createDecoration(decorationData).subscribe((response) => {
-        console.log('Decoration created:', response);
-        this.decorationCreated.emit(response);
-      });
-    // }
   }
 
 
   // This method will be executed when the form is submitted
   onSubmit() {
+    console.log('onSubmit called');
     console.log(this.decoration);
     // Retrieve form data from your form controls
     // This accesses the form data via component properties
@@ -85,31 +52,11 @@ export class DecorationFormComponent /* implements OnInit */ {
       } else {
           // This calls the service method to make an API request to create a new decoration
           this.decorationFormService.createDecoration(decorationData).subscribe((response) => {
-            console.log('Decoration created:', response);
             this.decorationCreated.emit(response);
+            this.decorationService.decorationCreated();
       })
     }
   }
-
-
-  // createDecoration(decoration : any) {
-  //   this.decorationFormService.createDecoration(decoration).subscribe(
-  //     (response : any) => {
-  //       // This assigns the retrieved data to the component property 
-  //       this.decoration = response.data;
-  //       // Remove this in production 
-  //       console.log('Decoration created:', response);
-  //       console.log(response.data);
-  //     }
-  //   )
-  // };
-
-
-  // updateDecoration(id : number, updatedDecoration: any) {
-  //   this.decorationFormService.updateDecoration(this.id, updatedDecoration).subscribe((response) => {
-  //     console.log('Decoration updated:', response);
-  //   });
-  // }
 
 
 }
