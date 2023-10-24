@@ -27,6 +27,7 @@ export class DecorationFormComponent /* implements OnInit */ {
   constructor(private route : ActivatedRoute, private decorationFormService : DecorationFormService) {
       // this.id = +this.route.snapshot.paramMap.get('id') || 0;
       // this.isUpdate = this.id !== 0;
+      this.decoration = { name: '', materials: '', directions: '' };
   }
 
 
@@ -57,6 +58,7 @@ export class DecorationFormComponent /* implements OnInit */ {
       // Create a new decoration
       this.decorationFormService.createDecoration(decorationData).subscribe((response) => {
         console.log('Decoration created:', response);
+        this.decorationCreated.emit(response);
       });
     // }
   }
@@ -64,7 +66,7 @@ export class DecorationFormComponent /* implements OnInit */ {
 
   // This method will be executed when the form is submitted
   onSubmit() {
-
+    console.log(this.decoration);
     // Retrieve form data from your form controls
     // This accesses the form data via component properties
       const decorationData = {
@@ -84,6 +86,7 @@ export class DecorationFormComponent /* implements OnInit */ {
           // This calls the service method to make an API request to create a new decoration
           this.decorationFormService.createDecoration(decorationData).subscribe((response) => {
             console.log('Decoration created:', response);
+            this.decorationCreated.emit(response);
       })
     }
   }

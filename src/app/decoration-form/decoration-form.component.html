@@ -2,13 +2,13 @@
     <div class="form-content">
         <form (ngSubmit)="onSubmit()">
             <h2>Ready to sprinkle your DIY holiday decoration magic? Share your festive inspiration!</h2>
-            <input type="text" [(ngModel)]="decoration.name" placeholder="Enter decoration name here" id="name">
+            <input type="text" [(ngModel)]="decoration.name" [ngModelOptions]="{standalone: true}" placeholder="Enter decoration name here" id="name">
             <br>
-            <textarea [(ngModel)]="decoration.materials" placeholder="Enter decoration materials here" id="materials"></textarea>
+            <textarea [(ngModel)]="decoration.materials" [ngModelOptions]="{standalone: true}" placeholder="Enter decoration materials here" id="materials"></textarea>
             <br>
-            <textarea [(ngModel)]="decoration.directions" placeholder="Enter decoration directions here" id="directions"></textarea>
+            <textarea [(ngModel)]="decoration.directions" [ngModelOptions]="{standalone: true}" placeholder="Enter decoration directions here" id="directions"></textarea>
             <br>
-            <input type="submit" id="submit">
+            <input (click)="saveDecoration(decoration)" type="submit" id="submit">
         </form>
     </div>
 </div>
