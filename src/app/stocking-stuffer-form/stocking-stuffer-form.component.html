@@ -1,10 +1,12 @@
 <div id="form-display">
     <div class="form-content">
-        <h2>Know a great surprise to slip inside the stockings? Share it with Santa's Elves!</h2>
-        <input type="text" placeholder="Enter stocking stuffer name here" id="name">
-        <br>
-        <textarea placeholder="Enter stocking stuffer description here" id="description"></textarea>
-        <br>
-        <input type="submit" id="submit">
+        <form (ngSubmit)="onSubmit()">
+            <h2>Know a great surprise to slip inside the stockings? Share it with Santa's Elves!</h2>
+            <input type="text" [(ngModel)]="stockingStuffer.name" [ngModelOptions]="{standalone: true}"  placeholder="Enter stocking stuffer name here" id="name">
+            <br>
+            <textarea [(ngModel)]="stockingStuffer.description" [ngModelOptions]="{standalone: true}" placeholder="Enter stocking stuffer description here" id="description"></textarea>
+            <br>
+            <input type="submit" id="submit">
+        </form>
     </div>
 </div>
