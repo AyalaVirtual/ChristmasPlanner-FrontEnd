@@ -5,7 +5,7 @@
     <div class="text">
         <ul>
             <li *ngFor="let stockingStuffer of stockingStuffers">
-                <a routerLink="/stockingstuffers/{{stockingStuffer}}">{{stockingStuffer.name}}</a>
+                <a [routerLink]="['/stockingstuffers', stockingStuffer.id]">{{stockingStuffer.name}}</a>
             </li>
         </ul>       
     </div>
