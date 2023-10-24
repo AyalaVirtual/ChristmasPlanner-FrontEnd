@@ -4,7 +4,7 @@
     <div class="text">
         <ul>
             <li *ngFor="let decoration of decorations">
-                <a routerLink="/decorations/{{decorations}}">{{decoration.name}}</a>
+                <a [routerLink]="['/decorations', decoration.id]">{{decoration.name}}</a>
             </li>
         </ul>       
     </div>

@@ -25,15 +25,24 @@ export class DecorationItemComponent implements OnInit {
 
   
   ngOnInit() {
-    let decorationId = this.route.snapshot.paramMap.get('decorationId') || '';
-    // This checks if decorationId is not null or undefined before making the HTTP request 
-    if (decorationId) {
-      this.decorationItemService.getDecorationById(+decorationId)
+    let id = this.route.snapshot.paramMap.get('id') || '';
+    // This checks if decoration id is not null or undefined before making the HTTP request 
+    if (id) {
+      this.decorationItemService.getDecorationById(+id)
         .subscribe((decorationItem) => {
           // This assigns the retrieved data to the component property 
           this.decorationItem = decorationItem;
         // Remove this in production 
         console.log(decorationItem);
+
+      // this.decorationItemService.getDecorationById(+id)  
+      //   .subscribe((response : any) => {
+      //     // This assigns the retrieved data to the component property 
+      //     this.decorationItem = response.data[id];
+      //   // Remove this in production 
+      //   console.log(response.data[id]);
+
+
       });
     }
   };

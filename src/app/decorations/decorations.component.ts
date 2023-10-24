@@ -32,6 +32,10 @@ export class DecorationsComponent implements OnInit {
         this.decorations = response.data;
         // Remove this in production 
         console.log(response.data);
+        // This is how to access an individual decoration and its attributes 
+        console.log(response.data[0]);
+        console.log(response.data[0].id);
+        
       }
     )
   };
