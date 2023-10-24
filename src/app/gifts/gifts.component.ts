@@ -26,7 +26,7 @@ export class GiftsComponent implements OnInit {
   ngOnInit(): void {
     this.fetchGifts();
 
-    this.giftService.giftIsCreated$.subscribe(() => {
+    this.giftService.giftCreated$.subscribe(() => {
       this.fetchGifts();
     });
   }

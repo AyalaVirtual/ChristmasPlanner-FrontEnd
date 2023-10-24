@@ -26,7 +26,7 @@ export class StockingStuffersComponent implements OnInit {
   ngOnInit(): void {
     this.fetchStockingStuffers();
 
-    this.stockingStufferService.stockingStufferCreated$.subscribe(() => {
+    this.stockingStuffersService.stockingStufferCreated$.subscribe(() => {
       this.fetchStockingStuffers();
     });
   }
