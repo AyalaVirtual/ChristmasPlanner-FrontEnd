@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 // Any time HTTP is used, this must be imported 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Decoration } from './decoration-form.component';
 
 
 // This means the app is already aware of it, so it's already available 
@@ -20,13 +22,16 @@ export class DecorationFormService {
 
   constructor(private http : HttpClient) { }
 
+  getAllDecorations() {
+    return this.http.get(`${this.apiUrl}/decorations/`);
+  }
   
-  createDecoration(decoration : any) {
-    return this.http.post(`${this.apiUrl}/decorations/`, decoration);
+  createDecoration(newDecoration : any) : Observable<any> {
+    return this.http.post(`${this.apiUrl}/decorations/`, newDecoration, this.httpOptions);
   }
 
-  updateDecoration(decorationId : number, decoration : any) {
-    return this.http.put(`${this.apiUrl}/decorations/${decorationId}`, decoration)
+  updateDecoration(id : number, updatedDecoration : any) : Observable<any> {
+    return this.http.put(`${this.apiUrl}/decorations/${id}/`, updatedDecoration, this.httpOptions)
   }
 
 

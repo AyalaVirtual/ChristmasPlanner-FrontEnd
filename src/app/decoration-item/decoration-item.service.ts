@@ -28,7 +28,7 @@ export class DecorationItemService {
   }
 
   updateDecoration(id : number, decoration : any) : Observable<any> {
-    return this.http.put(`${this.apiUrl}/decorations/${id}/`, decoration)
+    return this.http.put(`${this.apiUrl}/decorations/${id}/`, decoration, this.httpOptions)
   }
   
 
