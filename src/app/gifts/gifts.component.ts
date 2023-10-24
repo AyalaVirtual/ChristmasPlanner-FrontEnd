@@ -24,12 +24,20 @@ export class GiftsComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.fetchGifts();
+
+    this.giftService.giftIsCreated$.subscribe(() => {
+      this.fetchGifts();
+    });
+  }
+
+  fetchGifts() : void {  
     this.giftService.getAllGifts().subscribe(
       (response : any) => {
         // This assigns the retrieved data to the component property 
         this.gifts = response.data;
       }
     )
-  };
+  }
 
 }

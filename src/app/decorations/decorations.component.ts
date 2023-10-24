@@ -34,6 +34,7 @@ export class DecorationsComponent implements OnInit {
   fetchDecorations(): void {
     this.decorationService.getAllDecorations().subscribe(
       (response : any) => {
+        // This assigns the retrieved data to the component property 
         this.decorations = response.data;
       }
     )
