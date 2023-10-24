@@ -5,16 +5,25 @@ import { StockingStufferItemComponent } from '../stocking-stuffer-item/stocking-
 
 
 const stockingStuffersRoutes: Routes = [
+    // {
+    //     // This sets the URL path to the component 
+    //     path: 'stockingstuffers',
+    //     component: StockingStuffersComponent,
+    //     children: [
+    //         {
+    //             path: ':id',
+    //             component: StockingStufferItemComponent
+    //         },
+    //     ]
+    // }
+
     {
-        // This sets the URL path to the component 
         path: 'stockingstuffers',
         component: StockingStuffersComponent,
-        children: [
-            {
-                path: ':id',
-                component: StockingStufferItemComponent
-            },
-        ]
+    },
+    {
+        path: 'stockingstuffers/:id',
+        component: StockingStufferItemComponent
     }
 ];
 

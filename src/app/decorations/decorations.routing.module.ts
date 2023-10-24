@@ -5,16 +5,24 @@ import { DecorationItemComponent } from '../decoration-item/decoration-item.comp
 
 
 const decorationsRoutes: Routes = [
+    // {
+    //     // This sets the URL path to the component 
+    //     path: 'decorations',
+    //     component: DecorationsComponent,
+    //     children: [
+    //         {
+    //             path: ':id',
+    //             component: DecorationItemComponent
+    //         },
+    //     ]
+    // }
     {
-        // This sets the URL path to the component 
         path: 'decorations',
         component: DecorationsComponent,
-        children: [
-            {
-                path: ':id',
-                component: DecorationItemComponent
-            },
-        ]
+    },
+    {
+        path: 'decorations/:id',
+        component: DecorationItemComponent
     }
 ];
 

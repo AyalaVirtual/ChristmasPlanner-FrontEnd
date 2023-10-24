@@ -5,16 +5,25 @@ import { GiftItemComponent } from '../gift-item/gift-item.component';
 
 
 const giftsRoutes: Routes = [
+    // {
+    //     // This sets the URL path to the component 
+    //     path: 'gifts',
+    //     component: GiftsComponent,
+    //     children: [
+    //         {
+    //             path: ':id',
+    //             component: GiftItemComponent
+    //         },
+    //     ]
+    // }
+
     {
-        // This sets the URL path to the component 
         path: 'gifts',
         component: GiftsComponent,
-        children: [
-            {
-                path: ':id',
-                component: GiftItemComponent
-            },
-        ]
+    },
+    {
+        path: 'gifts/:id',
+        component: GiftItemComponent
     }
 ];
 

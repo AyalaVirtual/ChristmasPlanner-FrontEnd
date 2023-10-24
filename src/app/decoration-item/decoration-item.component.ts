@@ -21,6 +21,7 @@ export class DecorationItemComponent implements OnInit {
   decorationItem : any;
 
 
+  // Passing in ActivatedRoute makes the URL routes available to the class
   constructor(private decorationItemService : DecorationItemService, private route: ActivatedRoute) {}
 
   
@@ -35,15 +36,6 @@ export class DecorationItemComponent implements OnInit {
           this.decorationItem = decorationItem.data;
         // Remove this in production 
         console.log(decorationItem);
-      
-    
-      // this.decorationItemService.getDecorationById(+id)  
-      //   .subscribe((response : any) => {
-      //     // This assigns the retrieved data to the component property 
-      //     this.decorationItem = response.data[id];
-      //   // Remove this in production 
-      //   console.log(response.data[id]);
-
       });
     }
   };
