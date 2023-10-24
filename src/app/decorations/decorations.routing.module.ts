@@ -11,7 +11,7 @@ const decorationsRoutes: Routes = [
         component: DecorationsComponent,
         children: [
             {
-                path: 'decorations/:id',
+                path: ':id',
                 component: DecorationItemComponent
             },
         ]

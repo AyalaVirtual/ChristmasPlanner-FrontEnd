@@ -11,7 +11,7 @@ const stockingStuffersRoutes: Routes = [
         component: StockingStuffersComponent,
         children: [
             {
-                path: 'stockingstuffers/:id',
+                path: ':id',
                 component: StockingStufferItemComponent
             },
         ]

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 // Any time HTTP is used, this must be imported 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Decoration } from './decoration-item.component';
 
 
 // This means the app is already aware of it, so it's already available 
@@ -26,7 +27,7 @@ export class DecorationItemService {
     return this.http.get(`${this.apiUrl}/decorations/${id}/`);
   }
 
-  updateDecoration(id : number, decoration : any) {
+  updateDecoration(id : number, decoration : any) : Observable<any> {
     return this.http.put(`${this.apiUrl}/decorations/${id}/`, decoration)
   }
   
