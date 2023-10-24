@@ -3,6 +3,7 @@ import { DecorationService } from './decoration.service';
 
 
 export type Decoration = {
+  id : number;
   name : String;
   materials : String;
   directions : String;

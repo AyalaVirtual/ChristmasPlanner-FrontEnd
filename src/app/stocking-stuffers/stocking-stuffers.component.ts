@@ -3,6 +3,7 @@ import { StockingStuffersService } from './stocking-stuffer.service';
 
 
 export type StockingStuffer = {
+  id : number;
   name : String;
   description : String;
   tag : String;

@@ -14,7 +14,7 @@
 }
 
 .text {
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
     width: 110%;
@@ -22,21 +22,22 @@
     color: black;
     height: auto;
     box-sizing: border-box;
-    margin-top: 750px;
+    margin-top: 700px;
     margin-left: 305px;
     padding-left: 25px;
     padding-right: 25px;
-    padding-bottom: 65px;
+    padding-bottom: 50px;
     text-align: justify;
 }
 
-#name {
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+ul {
+    padding-top: 50px;
+    list-style-type: none;
 }
 
-h2, h3, p {
+li {
     font-family: Comic Sans MS, Comic Sans, cursive;
+    padding-bottom: 10px;
+    font-size: 16px;
 }
 

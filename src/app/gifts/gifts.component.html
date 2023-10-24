@@ -5,7 +5,7 @@
     <div class="text">
         <ul>
             <li *ngFor="let gift of gifts">
-                <a routerLink="gift-item">{{gift.name}}</a>
+                <a routerLink="/gifts/{{gifts}}">{{gift.name}}</a>
             </li>
         </ul>       
     </div>

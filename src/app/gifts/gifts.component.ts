@@ -3,6 +3,7 @@ import { GiftService } from './gift.service';
 
 
 export type Gift = {
+  id : number;
   name : String;
   description : String;
   tag : String;
