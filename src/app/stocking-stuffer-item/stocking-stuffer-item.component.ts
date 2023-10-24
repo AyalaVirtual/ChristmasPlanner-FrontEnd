@@ -16,7 +16,7 @@ export type StockingStuffer = {
   styleUrls: ['./stocking-stuffer-item.component.css']
 })
 export class StockingStufferItemComponent implements OnInit {
-  // This declares a property to store an individual decoration 
+  // This declares a property to store an individual stocking stuffer 
   stockingStufferItem : any;
 
 
@@ -26,7 +26,7 @@ export class StockingStufferItemComponent implements OnInit {
   
   ngOnInit() {
     let id = this.route.snapshot.paramMap.get('id') || '';
-    // This checks if decoration id is not null or undefined before making the HTTP request 
+    // This checks if stocking stuffer id is not null or undefined before making the HTTP request 
     if (id) {
       this.stockingStufferItemService.getStockingStufferById(+id)
         .subscribe((stockingStufferItem) => {

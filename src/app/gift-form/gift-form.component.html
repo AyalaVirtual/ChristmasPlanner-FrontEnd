@@ -1,6 +1,6 @@
 <div id="form-display">
     <div class="form-content">
-        <form (ngSubmit)="onSubmit()"></form>
+        <form (ngSubmit)="onSubmit()">
             <h2>Got an idea for the perfect gift to tuck under the tree? Add it to Santa's List!</h2>
             <input type="text" [(ngModel)]="gift.name" [ngModelOptions]="{standalone: true}"  placeholder="Enter gift name here" id="name">
             <br>

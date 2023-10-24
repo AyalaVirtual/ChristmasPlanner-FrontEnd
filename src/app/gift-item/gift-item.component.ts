@@ -26,7 +26,7 @@ export class GiftItemComponent implements OnInit {
   
   ngOnInit() {
     let id = this.route.snapshot.paramMap.get('id') || '';
-    // This checks if decoration id is not null or undefined before making the HTTP request 
+    // This checks if gift id is not null or undefined before making the HTTP request 
     if (id) {
       this.giftItemService.getGiftById(+id)
         .subscribe((giftItem) => {
