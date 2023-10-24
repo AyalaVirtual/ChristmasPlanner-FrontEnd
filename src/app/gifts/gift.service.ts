@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 // Any time HTTP is used, this must be imported 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Subject } from 'rxjs';
 
 
 // This means the app is already aware of it, so it's already available 
@@ -18,22 +19,20 @@ export class GiftService {
     };
 
 
+    private giftCreatedSource = new Subject<void>();
+    giftCreated$ = this.giftCreatedSource.asObservable();
+
+    giftCreated() {
+      console.log('giftCreated called');
+      this.giftCreatedSource.next();
+    }
+
+
   constructor(private http : HttpClient) { }
 
   getAllGifts() {
     return this.http.get(`${this.apiUrl}/gifts/`);
   }
 
-  getGiftById(giftId : number) {
-    return this.http.get(`${this.apiUrl}/gifts/{giftId}/`);
-  }
-
-  createGift(gift : any) {
-    return this.http.post(`${this.apiUrl}/gifts/`, gift);
-  }
-
-  updateGift(giftId : number, gift : any) {
-    return this.http.put(`${this.apiUrl}/gifts/`, gift)
-  }
 
 }

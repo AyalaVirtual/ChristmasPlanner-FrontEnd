@@ -24,12 +24,20 @@ export class StockingStuffersComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.fetchStockingStuffers();
+
+    this.stockingStufferService.stockingStufferCreated$.subscribe(() => {
+      this.fetchStockingStuffers();
+    });
+  }
+
+  fetchStockingStuffers(): void {
     this.stockingStuffersService.getAllStockingStuffers().subscribe(
       (response : any) => {
         // This assigns the retrieved data to the component property 
         this.stockingStuffers = response.data;
       }
     )
-  };
+  }
 
 }
