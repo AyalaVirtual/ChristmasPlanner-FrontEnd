@@ -11,7 +11,7 @@ const giftsRoutes: Routes = [
         component: GiftsComponent,
         children: [
             {
-                path: 'gift-item',
+                path: 'gifts/:id',
                 component: GiftItemComponent
             },
         ]

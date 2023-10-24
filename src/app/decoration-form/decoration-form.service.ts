@@ -26,7 +26,7 @@ export class DecorationFormService {
   }
 
   updateDecoration(decorationId : number, decoration : any) {
-    return this.http.put(`${this.apiUrl}/decorations/`, decoration)
+    return this.http.put(`${this.apiUrl}/decorations/${decorationId}`, decoration)
   }
 
 

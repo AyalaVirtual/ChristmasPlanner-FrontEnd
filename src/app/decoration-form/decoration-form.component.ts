@@ -23,14 +23,14 @@ export class DecorationFormComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.decorationFormService.createDecoration(newDecoration).subscribe(
-      (response : any) => {
-        // This assigns the retrieved data to the component property 
-        this.decoration = response.data;
+    // this.decorationFormService.createDecoration(newDecoration).subscribe(
+    //   (response : any) => {
+    //     // This assigns the retrieved data to the component property 
+    //     this.decoration = response.data;
         // Remove this in production 
-        console.log(response.data);
-      }
-    )
+        // console.log(response.data);
+    //   }
+    // )
   };
 
 }

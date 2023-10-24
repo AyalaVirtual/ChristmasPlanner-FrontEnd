@@ -1,11 +1,13 @@
 <div class="container">
     <img src="../../assets/images/decorations-bg.png" alt="DIY Holiday Decorations" class="image">
 
-    <div class="text">
-        <h2 id="name">{{decorationItem.name}}</h2>
+    <div class="text" *ngIf="decorationItem">
+        <h2 id="name">
+            {{decorationItem.name}}
+        </h2>
         
         <h3>Materials:</h3>
-        <div class="materials">
+        <div class="materials" *ngIf="decorationItem">
             <p id="materialsDisplay">
                 {{decorationItem.materials}}
             </p>

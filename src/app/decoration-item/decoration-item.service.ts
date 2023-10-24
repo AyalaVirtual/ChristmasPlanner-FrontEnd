@@ -22,7 +22,7 @@ export class DecorationItemService {
 
 
   getDecorationById(decorationId : number) {
-    return this.http.get(`${this.apiUrl}/decorations/{decorationId}/`);
+    return this.http.get(`${this.apiUrl}/decorations/${decorationId}/`);
   }
   
 

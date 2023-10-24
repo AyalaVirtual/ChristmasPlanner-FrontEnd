@@ -7,11 +7,11 @@ import { StockingStufferItemComponent } from '../stocking-stuffer-item/stocking-
 const stockingStuffersRoutes: Routes = [
     {
         // This sets the URL path to the component 
-        path: 'stocking-stuffers',
+        path: 'stockingstuffers',
         component: StockingStuffersComponent,
         children: [
             {
-                path: 'stocking-stuffer-item',
+                path: 'stockingstuffers/:id',
                 component: StockingStufferItemComponent
             },
         ]
