@@ -23,12 +23,12 @@ export class StockingStufferItemService {
   constructor(private http : HttpClient) { }
 
 
-  getGiftById(id : number) : Observable<any> {
-    return this.http.get(`${this.apiUrl}/gifts/${id}/`);
+  getStockingStufferById(id : number) : Observable<any> {
+    return this.http.get(`${this.apiUrl}/stockingstuffers/${id}/`);
   }
 
-  updateGift(id : number, gift : any) : Observable<any> {
-    return this.http.put(`${this.apiUrl}/gifts/${id}/`, gift)
+  updateStockingStuffer(id : number, stockingStuffer : any) : Observable<any> {
+    return this.http.put(`${this.apiUrl}/stockingstuffers/${id}/`, stockingStuffer)
   }
   
 
