@@ -20,6 +20,7 @@ export class GiftItemComponent implements OnInit {
   giftItem : any;
 
 
+  // Passing in ActivatedRoute makes the URL routes available to the class
   constructor(private giftItemService : GiftItemService, private route: ActivatedRoute) {}
 
   
@@ -31,8 +32,6 @@ export class GiftItemComponent implements OnInit {
         .subscribe((giftItem) => {
           // This assigns the retrieved data to the component property 
           this.giftItem = giftItem.data;
-        // Remove this in production 
-        console.log(giftItem);
       });
     }
   };

@@ -34,8 +34,6 @@ export class DecorationItemComponent implements OnInit {
           console.log(decorationItem);
           // This assigns the retrieved data to the component property 
           this.decorationItem = decorationItem.data;
-        // Remove this in production 
-        console.log(decorationItem);
       });
     }
   };

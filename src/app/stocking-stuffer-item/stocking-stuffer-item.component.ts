@@ -20,6 +20,7 @@ export class StockingStufferItemComponent implements OnInit {
   stockingStufferItem : any;
 
 
+  // Passing in ActivatedRoute makes the URL routes available to the class
   constructor(private stockingStufferItemService : StockingStufferItemService, private route: ActivatedRoute) {}
 
   
@@ -31,8 +32,6 @@ export class StockingStufferItemComponent implements OnInit {
         .subscribe((stockingStufferItem) => {
           // This assigns the retrieved data to the component property 
           this.stockingStufferItem = stockingStufferItem.data;
-        // Remove this in production 
-        console.log(stockingStufferItem);
       });
     }
   };
