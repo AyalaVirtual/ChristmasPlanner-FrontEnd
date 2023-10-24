@@ -6,8 +6,10 @@
             <li *ngFor="let decoration of decorations">
                 <a [routerLink]="['/decorations', decoration.id]">{{decoration.name}}</a>
             </li>
-        </ul>       
+        </ul>    
+    </div>
+    
+    <div>
+        <router-outlet></router-outlet>
     </div>
 </div>
-
-<router-outlet></router-outlet>

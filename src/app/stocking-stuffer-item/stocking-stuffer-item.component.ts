@@ -30,7 +30,7 @@ export class StockingStufferItemComponent implements OnInit {
       this.stockingStufferItemService.getStockingStufferById(+id)
         .subscribe((stockingStufferItem) => {
           // This assigns the retrieved data to the component property 
-          this.stockingStufferItem = stockingStufferItem;
+          this.stockingStufferItem = stockingStufferItem.data;
         // Remove this in production 
         console.log(stockingStufferItem);
       });

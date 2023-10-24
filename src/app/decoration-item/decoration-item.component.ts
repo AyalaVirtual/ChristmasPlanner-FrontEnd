@@ -30,18 +30,19 @@ export class DecorationItemComponent implements OnInit {
     if (id) {
       this.decorationItemService.getDecorationById(+id)
         .subscribe((decorationItem) => {
+          console.log(decorationItem);
           // This assigns the retrieved data to the component property 
-          this.decorationItem = decorationItem;
+          this.decorationItem = decorationItem.data;
         // Remove this in production 
         console.log(decorationItem);
-
+      
+    
       // this.decorationItemService.getDecorationById(+id)  
       //   .subscribe((response : any) => {
       //     // This assigns the retrieved data to the component property 
       //     this.decorationItem = response.data[id];
       //   // Remove this in production 
       //   console.log(response.data[id]);
-
 
       });
     }

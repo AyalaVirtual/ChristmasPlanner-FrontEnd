@@ -24,6 +24,7 @@ import { DecorationItemComponent } from './decoration-item/decoration-item.compo
 import { DecorationsRoutingModule } from './decorations/decorations.routing.module';
 import { GiftsRoutingModule } from './gifts/gifts.routing.module';
 import { StockingStuffersRoutingModule } from './stocking-stuffers/stocking-stuffers.routing.module';
+import { EmptyRouteComponent } from './empty-route/empty-route.component';
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import { StockingStuffersRoutingModule } from './stocking-stuffers/stocking-stuf
     GiftItemComponent,
     StockingStufferItemComponent,
     DecorationItemComponent,
+    EmptyRouteComponent,
   ],
   imports: [
     BrowserModule,
