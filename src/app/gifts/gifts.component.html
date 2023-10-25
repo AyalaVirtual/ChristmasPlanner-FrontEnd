@@ -3,7 +3,7 @@
     
 
     <div class="text">
-        <ul>
+        <ul >
             <li *ngFor="let gift of gifts">
                 <a [routerLink]="['/gifts', gift.id]">{{gift.name}}</a>
             </li>

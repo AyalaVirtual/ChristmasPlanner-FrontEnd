@@ -1,8 +1,11 @@
 <section>
     <h2>Get Gift Ideas</h2>
-    {{input}}
-    <input (keyup)="findGiftByTag(input)" [(ngModel)]="input" type="text" placeholder="Enter text here">
-    <input (click)="findGiftByTag(input)" type="submit" value="Search" id="submit">
+    {{searchTerm}}
+    <input (keyup)="findGiftByTag(searchTerm)" [(ngModel)]="searchTerm" (input)="search()" type="text" placeholder="Enter text here">
+    <input (click)="findGiftByTag(searchTerm)" type="submit" value="Search" id="submit">
+    <div *ngFor="let gift of gifts">
+        <!-- Display item attributes here -->
+      </div>
 </section>
 
 <a href="" id="browse-all">
