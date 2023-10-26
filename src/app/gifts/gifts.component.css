@@ -1,6 +1,6 @@
 .container {
     position: relative;
-    width: 300px; /* Set the width of the container */
+    width: 300px;
     padding-bottom: 200px;
 }
 
@@ -8,8 +8,7 @@
     margin-top: 50px;
     display: block;
     width: 300%;
-    /* height: 1200px; */
-    height: 950px;
+    height: 1100px;
 }
 
 .text {
@@ -21,17 +20,19 @@
     color: black;
     height: auto;
     box-sizing: border-box;
-    /* margin-top: 230px; */
-    margin-top: 190px;
+    margin-top: 220px;
     margin-left: 230px;
     padding-left: 25px;
     padding-right: 25px;
     padding-bottom: 75px;
     text-align: justify;
+    border-color: rgb(185, 164, 125);
+    border-radius: 50px;
+    border-style: double;
+    border-width: 10px;
 }
 
 ul {
-    /* padding-top: 50px; */
     padding-top: 30px;
     list-style-type: none;
 }

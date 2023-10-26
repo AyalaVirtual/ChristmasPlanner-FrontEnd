@@ -1,7 +1,5 @@
 #form-display {
-    /* height: 970px; */
     height: 840px;
-    /* width: 440px; */
     width: 390px;
     background-color: hsla(198, 74%, 72%, 0.5);
     border: 2px;
@@ -32,9 +30,7 @@ input, textarea {
 }
 
 #materials, #directions {
-    /* height: 200px; */
     height: 120px;
-    /* width: 380px; */
     width: 320px;
     padding-bottom: 50px;
 }
