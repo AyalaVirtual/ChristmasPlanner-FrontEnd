@@ -3,9 +3,11 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    overflow: hidden;
 }
 
 .container {
+    display: flex;
     position: relative;
     width: 350px;
     padding-bottom: 200px;
@@ -14,9 +16,11 @@
 .image {
     margin-top: 50px;
     display: block;
-    width: 300%;
-    margin-left: 100px;
-    height: 1200px;
+    width: 220%;
+    margin-left: 20px;
+    height: 900px;
+    position: relative;
+    z-index: 1;
 }
 
 .text {
@@ -28,8 +32,8 @@
     color: white;
     height: auto;
     box-sizing: border-box;
-    margin-top: 100px;
-    margin-left: 800px;
+    margin-top: 520px;
+    margin-left: 820px;
     padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 75px;
@@ -48,5 +52,16 @@
 
 h2, h3, p {
     font-family: Comic Sans MS, Comic Sans, cursive;
+}
+
+#itemImage {
+    height: 430px;
+    width: 500px;
+    margin-top: 40px;
+    position: relative;
+    z-index: 2;
+    left: -100px;
+    border: 10px double white;
+    border-radius: 50px;
 }
 
