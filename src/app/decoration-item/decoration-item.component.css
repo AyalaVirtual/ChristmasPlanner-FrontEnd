@@ -24,16 +24,18 @@
     top: 0;
     left: 0;
     width: 165%;
-    background-color: hsla(40, 60%, 70%, 0.7); /* Semi-transparent background */
+    background-color: hsla(201, 76%, 73%, 0.7); /* Semi-transparent background */
     color: black;
     height: auto;
     box-sizing: border-box;
-    margin-left: 120px;
-    margin-top: 400px;
+    margin-left: 720px;
+    margin-top: 450px;
     padding-left: 40px;
     padding-right: 40px;
     padding-bottom: 65px;
     text-align: justify;
+    border: 10px double rgb(49, 83, 177);
+    border-radius: 50px;
 }
 
 #name {
@@ -47,8 +49,12 @@ h2, h3, p {
 }
 
 #itemImage {
-    height: 350px;
+    height: 400px;
     width: 500px;
-    margin-top: 450px;
+    position: relative;
+    z-index: 2;
+    left: -50px;
+    border: 10px double rgb(49, 83, 177);
+    border-radius: 50px;
 }
 
