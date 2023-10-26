@@ -7,6 +7,7 @@ export type StockingStuffer = {
   id : number;
   name : String;
   description : String;
+  image: String;
  }
 
 

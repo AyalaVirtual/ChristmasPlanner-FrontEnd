@@ -8,6 +8,7 @@ export type StockingStuffer = {
   id: number;
   name : String;
   description : String;
+  image: String;
  }
 
 
@@ -25,7 +26,7 @@ export class StockingStufferFormComponent {
     
   
     constructor(private route : ActivatedRoute, private stockingStufferFormService : StockingStufferFormService, private stockingStuffersService : StockingStuffersService) {
-        this.stockingStuffer = { name: '', description: '' };
+        this.stockingStuffer = { name: '', description: '', image: '' };
     }
   
   
@@ -38,7 +39,8 @@ export class StockingStufferFormComponent {
         const stockingStufferData = {
           // This extracts the data from the form controls 
           name: this.stockingStuffer.name,
-          description: this.stockingStuffer.description
+          description: this.stockingStuffer.description,
+          image: this.stockingStuffer.image,
         };
   
         if (this.isUpdate) {

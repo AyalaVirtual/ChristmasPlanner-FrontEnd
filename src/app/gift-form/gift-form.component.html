@@ -6,6 +6,8 @@
             <br>
             <textarea placeholder="Enter gift description here" [(ngModel)]="gift.description" [ngModelOptions]="{standalone: true}" id="description"></textarea>
             <br>
+            <textarea [(ngModel)]="gift.image" [ngModelOptions]="{standalone: true}" placeholder="Enter gift image URL here" id="image"></textarea>
+            <br>
             <input type="submit" id="submit">
         </form>
     </div>

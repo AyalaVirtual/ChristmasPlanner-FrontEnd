@@ -7,6 +7,7 @@ export type Gift = {
   id : number;
   name : String;
   description : String;
+  image: String;
  }
 
 

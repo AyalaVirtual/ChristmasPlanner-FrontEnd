@@ -8,6 +8,7 @@ export type Gift = {
   id: number;
   name : String;
   description : String;
+  image: String;
  }
 
 
@@ -25,7 +26,7 @@ export class GiftFormComponent {
   
 
   constructor(private route : ActivatedRoute, private giftFormService : GiftFormService, private giftService : GiftService) {
-      this.gift = { name: '', description: '' };
+      this.gift = { name: '', description: '', image: '' };
   }
 
 
@@ -38,7 +39,8 @@ export class GiftFormComponent {
       const giftData = {
         // This extracts the data from the form controls 
         name: this.gift.name,
-        description: this.gift.description
+        description: this.gift.description,
+        image: this.gift.image
       };
 
       if (this.isUpdate) {
