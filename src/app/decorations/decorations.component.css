@@ -5,10 +5,10 @@
 }
 
 .image {
-    margin-top: 70px;
+    margin-top: 50px;
     display: block;
-    width: 240%;
-    /* height: auto; */
+    /* width: 250%; */
+    width: 270%;
     height: 1100px;
 }
 
@@ -17,20 +17,21 @@
     top: 0;
     left: 0;
     width: 115%;
-    background-color: hsla(40, 63%, 70%, 0.75); /* Semi-transparent background */
+    background-color: hsla(40, 100%, 84%, 0.75); /* Semi-transparent background */
     color: black;
     height: auto;
     box-sizing: border-box;
     margin-top: 600px;
-    margin-left: 180px;
+    /* margin-left: 202px; */
+    margin-left: 230px;
     padding-left: 25px;
-    padding-right: 25px;
-    padding-bottom: 50px;
+    padding-right: 25px;padding-bottom: 50px;
     text-align: justify;
 }
 
 ul {
-    padding-top: 50px;
+    /* padding-top: 50px; */
+    padding-top: 30px;
     list-style-type: none;
 }
 

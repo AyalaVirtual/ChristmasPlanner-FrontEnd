@@ -7,7 +7,8 @@
 .image {
     margin-top: 50px;
     display: block;
-    width: 1500px;
+    /* width: 1500px; */
+    width: 1700px;
     height: 1400px;
 }
 
@@ -15,21 +16,24 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 110%;
+    /* width: 110%; */
+    width: 120%;
     background-color: hsla(110, 27%, 54%, 0.7); /* Semi-transparent background */
     color: black;
     height: auto;
     box-sizing: border-box;
-    margin-top: 700px;
-    margin-left: 305px;
-    padding-left: 25px;
+    /* margin-top: 700px; */
+    /* margin-left: 305px; */
+    margin-top: 720px;
+    margin-left: 350px;
+    /* padding-left: 25px; */
     padding-right: 25px;
     padding-bottom: 50px;
     text-align: justify;
 }
 
 ul {
-    padding-top: 50px;
+    padding-top: 30px;
     list-style-type: none;
 }
 

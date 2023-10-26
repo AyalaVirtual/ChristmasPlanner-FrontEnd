@@ -6,33 +6,32 @@
 }
 
 .container {
+    display: flex;
     position: relative;
-    width: 300px; /* Set the width of the container */
+    width: 300px;
     padding-bottom: 200px;
-    margin-left: 60px;
 }
 
 .image {
-    margin-top: 70px;
+    margin-top: 50px;
     display: block;
-    width: 370%;
-    /* height: auto; */
-    height: 1100px;
+    width: 245%;
+    height: 900px;
 }
 
 .text {
     position: absolute;
     top: 0;
     left: 0;
-    width: 160%;
+    width: 165%;
     background-color: hsla(40, 60%, 70%, 0.7); /* Semi-transparent background */
     color: black;
     height: auto;
     box-sizing: border-box;
-    margin-left: 315px;
-    margin-top: 475px;
-    padding-left: 25px;
-    padding-right: 25px;
+    margin-left: 120px;
+    margin-top: 400px;
+    padding-left: 40px;
+    padding-right: 40px;
     padding-bottom: 65px;
     text-align: justify;
 }
@@ -45,5 +44,11 @@
 
 h2, h3, p {
     font-family: Comic Sans MS, Comic Sans, cursive;
+}
+
+#itemImage {
+    height: 350px;
+    width: 500px;
+    margin-top: 450px;
 }
 

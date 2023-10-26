@@ -9,6 +9,7 @@ export type Decoration = {
   name : String;
   materials : String;
   directions : String;
+  image: String;
  }
 
 
@@ -26,7 +27,7 @@ export class DecorationFormComponent {
   
 
   constructor(private route : ActivatedRoute, private decorationFormService : DecorationFormService, private decorationService : DecorationService) {
-      this.decoration = { name: '', materials: '', directions: '' };
+      this.decoration = { name: '', materials: '', directions: '', image: '' };
   }
 
 
@@ -40,7 +41,8 @@ export class DecorationFormComponent {
         // This extracts the data from the form controls 
         name: this.decoration.name,
         materials: this.decoration.materials,
-        directions: this.decoration.directions
+        directions: this.decoration.directions,
+        image: this.decoration.image
       };
 
       if (this.isUpdate) {

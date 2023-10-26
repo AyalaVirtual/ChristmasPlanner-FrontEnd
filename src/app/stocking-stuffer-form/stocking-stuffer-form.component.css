@@ -1,6 +1,7 @@
 #form-display {
-    height: 700px;
-    width: 470px;
+    height: 680px;
+    /* width: 470px; */
+    width: 400px;
     background-color: hsla(198, 74%, 72%, 0.5);
     border: 2px;
     border-color: white;
@@ -9,7 +10,7 @@
 }
 
 .form-content {
-    margin-top: 80px;
+    margin-top: 60px;
     font-family: Comic Sans MS, Comic Sans, cursive;
     text-align: center;
     padding-left: 30px;
@@ -30,7 +31,8 @@ input, textarea {
 
 #description {
     height: 200px;
-    width: 400px;
+    /* width: 400px; */
+    width: 335px;
     padding-bottom: 50px;
 }
 

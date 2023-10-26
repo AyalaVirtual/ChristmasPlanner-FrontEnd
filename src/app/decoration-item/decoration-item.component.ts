@@ -8,6 +8,7 @@ export type Decoration = {
   name : String;
   materials : String;
   directions : String;
+  image: String;
  }
 
 

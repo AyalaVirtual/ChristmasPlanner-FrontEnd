@@ -1,20 +1,26 @@
 #form-display {
-    height: 630px;
+    /* height: 630px; */
+    height: 470px;
     width: 450px;
     background-color: hsla(198, 74%, 72%, 0.5);
     border: 2px;
     border-color: white;
     border-style: solid;
     border-radius: 50px;
-    padding-bottom: 80px;
+    padding-bottom: 100px;
 }
 
 .form-content {
-    margin-top: 80px;
+    /* margin-top: 80px; */
+    margin-top: 50px;
     font-family: Comic Sans MS, Comic Sans, cursive;
     text-align: center;
     padding-left: 30px;
     padding-right: 30px;
+}
+
+h2 {
+    font-size: 22px;
 }
 
 input, textarea {
@@ -30,7 +36,8 @@ input, textarea {
 }
 
 #description {
-    height: 200px;
+    /* height: 200px; */
+    height: 110px;
     width: 380px;
     padding-bottom: 50px;
 }

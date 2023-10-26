@@ -8,8 +8,8 @@
     margin-top: 50px;
     display: block;
     width: 300%;
-    /* height: auto; */
-    height: 1200px;
+    /* height: 1200px; */
+    height: 950px;
 }
 
 .text {
@@ -21,7 +21,8 @@
     color: black;
     height: auto;
     box-sizing: border-box;
-    margin-top: 230px;
+    /* margin-top: 230px; */
+    margin-top: 190px;
     margin-left: 230px;
     padding-left: 25px;
     padding-right: 25px;
@@ -30,7 +31,8 @@
 }
 
 ul {
-    padding-top: 50px;
+    /* padding-top: 50px; */
+    padding-top: 30px;
     list-style-type: none;
 }
 

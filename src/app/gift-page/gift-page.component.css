@@ -11,6 +11,7 @@ app-gifts, app-gift-form {
 
 app-gift-form {
     float: right;
-    margin-top: 295px;
+    /* margin-top: 295px; */
+    margin-top: 240px;
     margin-right: 40px;
 }
