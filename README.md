@@ -1,6 +1,6 @@
 # Christmas Planner Front-End 
 
-A holiday planning application designed to allow users to find inspiration for DIY Christmas ornaments and decorations, as well as ideas for gifts and stocking stuffers. Users are able to search for, add, and edit different ideas for DIY decorations, gifts, and stocking stuffers as they plan for Christmas. 
+A holiday planning application designed to allow users to find inspiration for DIY Christmas ornaments and decorations, as well as ideas for gifts and stocking stuffers. Users are able to browse and add different ideas for DIY decorations, gifts, and stocking stuffers as they plan for Christmas. 
 
 ## Technologies Used
 
@@ -9,12 +9,6 @@ A holiday planning application designed to allow users to find inspiration for D
 * HTML 
 * CSS 
 * VS Code 
-* Java 17
-* Maven
-* Spring Boot
-* Spring Data (JPA) 
-* H2 Database
-* Postman
 
 
 
@@ -24,7 +18,7 @@ I started off by creating my user stories and acceptance criteria. This helped m
 
 For the final step of the planning phase, I created an ERD (entity relationship diagram) to plan my different models and their relevant attributes. This helped me to visualize their individual tables and corresponding attributes in the database. 
 
-Then, I built the back-end of the app, using Java, the Spring framework, and H2 Database to create a REST API. Finally, I did my API testing using MockMVC before moving on to create the front-end of the app. 
+Then, I built the back-end of the app, using Java, the Spring framework, and H2 Database to create a REST API. Finally, I did my API testing using MockMVC before moving on to create the front-end of the app. After creating a new Angular app for the front-end, I created my components, routes, and services, and connected the front-end to the back-end, before circling back to work on the styling.  
 
 
 
@@ -41,15 +35,12 @@ Then, I built the back-end of the app, using Java, the Spring framework, and H2 
 | POST      | /api/decorations/             | Create a decoration idea             | Public   |
 | GET       | /api/decorations/             | Get all decoration ideas             | Public   |
 | GET       | /api/decorations/1/           | Get a decoration idea                | Public   |
-| PUT       | /api/decorations/1/           | Update a decoration idea             | Public   |
 | POST      | /api/gifts/                   | Create a gift idea                   | Public   |
 | GET       | /api/gifts/                   | Get all gift ideas                   | Public   |
 | GET       | /api/gifts/1/                 | Get a gift idea                      | Public   |
-| PUT       | /api/gifts/1/                 | Update a gift idea                   | Public   |
 | POST      | /api/stockingstuffers/        | Creating a stocking stuffer idea     | Public   |
 | GET       | /api/stockingstuffers/        | Get all stocking stuffer ideas       | Public   |
 | GET       | /api/stockingstuffers/1/      | Get a stocking stuffer idea          | Public   |
-| PUT       | /api/stockingstuffers/1/      | Update a stocking stuffer idea       | Public   |
 
 
 
@@ -71,8 +62,7 @@ As a user I want to view a specific Christmas decorating idea so that I can foll
 
 <b>Acceptance Criteria:</b>
 <br>
-* User can filter search results by Christmas decorating ideas.
-* Search results should return an exact match to the user's search criteria.
+* User can click a link from the main page of search results that will bring them to a page with that specific decoration. 
 
 
 <b>User Story 3:</b>
@@ -81,21 +71,11 @@ As a user I want to add a new Christmas decorating idea so that I can share my d
 
 <b>Acceptance Criteria:</b>
 <br>
-* User can add new Christmas decorating ideas, specifying the name, materials needed, and directions. 
+* User can add new Christmas decorating ideas, specifying the name, materials needed, directions, and the URL of an image showing the finished product. 
 * User can save the Christmas decorating idea to the overall list of Christmas decorating inspiration.
 
 
 <b>User Story 4:</b>
-<br>
-As a user I want to update/edit the details of a Christmas decorating idea, including the name, materials needed, and directions. (PUT Christmas decorating idea)
-
-<b>Acceptance Criteria:</b>
-<br>
-* User can edit/update Christmas decorating ideas. 
-* User can save the updated information for specific Christmas decorating ideas.
-
-
-<b>User Story 5:</b>
 <br>
 As a user I want to view a list of all gift ideas for inspiration for my Christmas shopping. (GET all gift ideas)
 
@@ -105,38 +85,27 @@ As a user I want to view a list of all gift ideas for inspiration for my Christm
 * Search results should display a list of all gift ideas.
 
 
-<b>User Story 6:</b>
+<b>User Story 5:</b>
 <br>
 As a user I want to view a specific gift idea for inspiration for my Christmas shopping. (GET gift idea by id)
 
 <b>Acceptance Criteria:</b>
 <br>
-* User can filter search results for gift ideas. 
-* Search results should return an exact match to the user's search criteria.
+* User can click a link from the main page of search results that will bring them to a page with that specific gift. 
 
 
-<b>User Story 7:</b>
+<b>User Story 6:</b>
 <br>
 As a user I want to add a new gift idea so that I can share my gift ideas with other users. (POST gift idea)
 
 <b>Acceptance Criteria:</b>
 <br>
 
-* User can add new gift ideas, specifying the name and description. 
+* User can add new gift ideas, specifying the name, description, and the URL of an image showing the finished product. 
 * User can save the gift idea to the overall list of gift ideas for inspiration.
 
 
-<b>User Story 8:</b>
-<br>
-As a user I want to update/edit the details of a gift idea, including the name and description. (PUT gift idea)
-
-<b>Acceptance Criteria:</b>
-<br>
-* User can edit/update gift ideas. 
-* User can save the updated information for specific gift ideas.
-
-
-<b>User Story 9:</b>
+<b>User Story 7:</b>
 <br>
 As a user I want to view a list of all the stocking stuffer ideas for inspiration for my Christmas shopping. (GET all stocking stuffer ideas)
 
@@ -146,40 +115,35 @@ As a user I want to view a list of all the stocking stuffer ideas for inspiratio
 * Search results should display a list of all stocking stuffer ideas.
 
 
-<b>User Story 10:</b>
+<b>User Story 8:</b>
 <br>
 As a user I want to view a specific stocking stuffer idea for inspiration for my Christmas shopping. (GET stocking stuffer idea by id)
 
 <b>Acceptance Criteria:</b>
 <br>
-* User can filter search results for stocking stuffer ideas. 
-* Search results should return an exact match to the user's search criteria.
+* User can click a link from the main page of search results that will bring them to a page with that specific stocking stuffer. 
 
 
-<b>User Story 11:</b>
+<b>User Story 9:</b>
 <br>
 As a user I want to add a new stocking stuffer idea so that I can share my stocking stuffer ideas with other users. (POST stocking stuffer idea)
 
 <b>Acceptance Criteria:</b>
 <br>
-* User can add new stocking stuffer ideas, specifying the name and description. 
+* User can add new stocking stuffer ideas, specifying the name, description, and the URL of an image showing the finished product.
 * User can save the stocking stuffer idea to the overall list of stocking stuffer ideas for inspiration.
-
-
-<b>User Story 12:</b>
-<br>
-As a user I want to update/edit the details of a stocking stuffer idea, including the name and description. (PUT stocking stuffer idea)
-
-<b>Acceptance Criteria:</b>
-<br>
-* User can edit/update stocking stuffer ideas. 
-* User can save the updated information for specific stocking stuffer ideas.
 
 
 
 ## Major Hurdles
 
-The biggest hurdle was figuring out how to link the front-end (Angular) to the back-end (Java/Spring). 
+The biggest hurdle was figuring out how to link the front-end (Angular) to the back-end (Java/Spring). I had routing issues on the front-end with all of my endpoints, which I was surprised by. Before starting this project, I thought that since the logic was already written on the back-end, that I wouldn't really have to do much on the front-end besides styling the pages and pointing towards the API on the back-end. Although the routing issues were definitely a major hurdle for me during this project, I was thankfully able to conquer them with some help from my instructors, Suresh and Leo, whom I've credited in my "Special Thanks" section below.  
+
+
+
+## Post MVP 
+
+I plan on continuing to work on this project in the future so that I can implement a PUT method for users to update existing data, as well as a search bar to filter the results for the gift and stocking stuffer models, depending on whether they are tagged as gift or stocking stuffer ideas for 'men', 'women', or 'children'/'kids'. I do intend on implementing these features in the near future so that I can see my vision truly realized. 
 
 
 
@@ -198,7 +162,7 @@ The biggest hurdle was figuring out how to link the front-end (Angular) to the b
 
 ### Special Thanks
 
-* Leonardo Rodriguez - my instructor who taught me all the concepts used to build the front-end of this project, including HTML, CSS, TypeScript, and Angular. [GitHub](https://github.com/LRodriguez92) 
+* Leonardo Rodriguez - my instructor who not only taught me all the concepts used to build the front-end of this project (including HTML, CSS, TypeScript, and Angular), but also helped me conquer the issues with routing, which turned out to be a major hurdle for me in this project. He helped me spot several errors that were keeping my code from working as intended and helped write the solution to work around the routing issues for the GET and POST methods. [GitHub](https://github.com/LRodriguez92) 
 
 * Suresh Sigera - my instructor who taught me all the concepts used to build the back-end of this project, including Java, the Spring framework, and API testing tools such as Postman, MockMVC, and REST-Assured / Cucumber. [GitHub](https://github.com/sureshmelvinsigera)
 
