@@ -40,7 +40,7 @@ export class StockingStufferFormComponent {
           // This extracts the data from the form controls 
           name: this.stockingStuffer.name,
           description: this.stockingStuffer.description,
-          image: this.stockingStuffer.image,
+          image: this.stockingStuffer.image
         };
   
         if (this.isUpdate) {

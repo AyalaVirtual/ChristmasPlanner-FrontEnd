@@ -1,11 +1,11 @@
 <div class="container">
-    <img src="../../assets/images/stockings-bg.png" alt="Santa's Stocking Stuffers" class="image">
+    <img src="../../assets/images/stockings.png" alt="Santa's Stocking Stuffers" class="image">
     
 
     <div class="text">
         <ul>
             <li *ngFor="let stockingStuffer of stockingStuffers">
-                <a [routerLink]="['/stockingstuffers', stockingStuffer.id]">{{stockingStuffer.name}}</a>
+                <a [routerLink]="['/stocking-stuffers', stockingStuffer.id]">{{stockingStuffer.name}}</a>
             </li>
         </ul>       
     </div>
