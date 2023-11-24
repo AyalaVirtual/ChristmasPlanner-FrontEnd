@@ -20,20 +20,21 @@ export class StockingStufferItemService {
     };
 
 
+  // This injects the HttpClient module as a dependency. HttpClient is a module provided by Angular that allows the application to send HTTP requests. 
   constructor(private http : HttpClient) { }
 
 
   /* 
-    This function takes an id parameter of type number and returns an Observable object (which are used to handle asynchronous data streams) that represents the HTTP response from the API. The method then uses the HttpClient's get() function to send an HTTP GET request to the specified URL, which includes the id parameter.
-*/
+    This function takes an id parameter of type 'number' and returns an Observable object (which are used to handle asynchronous data streams) that represents the HTTP response from the API. It then sends an HTTP GET request to the specified URL, which includes the id parameter to retrieve the stocking stuffer items from the API.
+                                    */
   getStockingStufferById(id : number) : Observable<any> {
     return this.http.get(`${this.apiUrl}/stockingstuffers/${id}/`);
   }
 
 
   /* 
-    This method takes an id parameter and a stockingStuffer parameter of type 'any' and returns an Observable object. It uses the HttpClient's put() function to send an HTTP PUT request to the specified URL, which includes the id parameter and the stockingStuffer parameter as the request body.
-*/
+    This method takes an id parameter and a stockingStuffer parameter of type 'any' and returns an Observable object. It then sends an HTTP PUT request to the specified URL, which includes the id parameter and the stockingStuffer parameter as the request body. This updates stocking stuffer items from the API.
+    */
   updateStockingStuffer(id : number, stockingStuffer : any) : Observable<any> {
     return this.http.put(`${this.apiUrl}/stockingstuffers/${id}/`, stockingStuffer)
   }
