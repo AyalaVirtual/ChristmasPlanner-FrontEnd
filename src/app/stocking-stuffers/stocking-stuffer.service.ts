@@ -19,17 +19,23 @@ export class StockingStuffersService {
     };
 
 
+    /* 
+       The "stockingStufferCreated$" variable is defined as the Observable version of the "stockingStufferCreatedSource" subject. This allows other parts of the code to subscribe to this Observable and be notified when a stocking stuffer is created.
+    */
     private stockingStufferCreatedSource = new Subject<void>();
     stockingStufferCreated$ = this.stockingStufferCreatedSource.asObservable();
 
+
+    // This function emits a new event by calling the "next" method on the "stockingStufferCreatedSource" subject. 
     stockingStufferCreated() {
-      console.log('stockingStufferCreated called');
-      this.stockingStufferCreatedSource.next();
+ this.stockingStufferCreatedSource.next();
     }  
 
 
   constructor(private http : HttpClient) { }
 
+
+  // This sends an HTTP GET request to the API's "/stockingstuffers" endpoint using the "http" instance. The response from the API is returned. 
   getAllStockingStuffers() {
     return this.http.get(`${this.apiUrl}/stockingstuffers/`);
   }
