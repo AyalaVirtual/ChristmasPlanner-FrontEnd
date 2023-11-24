@@ -22,18 +22,19 @@ export class DecorationItemComponent implements OnInit {
   decorationItem : any;
 
 
-  // Passing in ActivatedRoute makes the URL routes available to the class
+  // ActivatedRoute is a service that provides information about the currently activated route. Passing in ActivatedRoute as a parameter makes the URL routes available to the class. 
   constructor(private decorationItemService : DecorationItemService, private route: ActivatedRoute) {}
 
   
+  /*
+    This retrieves the ID from the URL route parameters using the "snapshot" of the ActivatedRoute service. It then checks if the ID is not empty. If it is not empty, it calls the "getDecorationById" method of the "decorationItemService" service, passing the ID as a parameter. This method returns an observable that emits the decoration item data. It then uses the "subscribe" method on the observable to handle the emitted decoration item data and stores it in the "decorationItem" property of the component.
+   */
   ngOnInit() {
     let id = this.route.snapshot.paramMap.get('id') || '';
-    // This checks if decoration id is not null or undefined before making the HTTP request 
+    
     if (id) {
-      this.decorationItemService.getDecorationById(+id)
+    this.decorationItemService.getDecorationById(+id)
         .subscribe((decorationItem) => {
-          console.log(decorationItem);
-          // This assigns the retrieved data to the component property 
           this.decorationItem = decorationItem.data;
       });
     }
