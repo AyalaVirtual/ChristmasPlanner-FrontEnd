@@ -19,9 +19,14 @@ export class DecorationService {
     };
 
 
+    /* 
+       The "decorationCreated$" variable is defined as the Observable version of the "decorationCreatedSource" subject. This allows other parts of the code to subscribe to this Observable and be notified when a decoration is created.
+    */
     private decorationCreatedSource = new Subject<void>();
     decorationCreated$ = this.decorationCreatedSource.asObservable();
 
+
+    // This function emits a new event by calling the "next" method on the "decorationCreatedSource" subject. 
     decorationCreated() {
    this.decorationCreatedSource.next();
     }
