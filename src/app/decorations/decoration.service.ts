@@ -34,6 +34,8 @@ export class DecorationService {
 
     constructor(private http : HttpClient) { }
 
+
+    // This sends an HTTP GET request to the API's "/decorations" endpoint using the "http" instance and returns the response from the API. 
     getAllDecorations() {
       return this.http.get(`${this.apiUrl}/decorations/`);
     }
