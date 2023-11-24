@@ -18,7 +18,9 @@ I started off by creating my user stories and acceptance criteria. This helped m
 
 For the final step of the planning phase, I created an ERD (entity relationship diagram) to plan my different models and their relevant attributes. This helped me to visualize their individual tables and corresponding attributes in the database. 
 
-Then, I built the back-end of the app, using Java, the Spring framework, and H2 Database to create a REST API. Finally, I did my API testing using MockMVC before moving on to create the front-end of the app. After creating a new Angular app for the front-end, I created my components, routes, and services, and connected the front-end to the back-end, before circling back to work on the styling.  
+Then, I built the back-end of the app, using Java, the Spring framework, and H2 Database to create a REST API. Finally, I did my API testing using MockMVC before moving on to create the front-end of the app. 
+
+After creating a new Angular app for the front-end, I created my components, routes, and services, and connected the front-end to the back-end, before circling back to work on the styling.  
 
 
 
