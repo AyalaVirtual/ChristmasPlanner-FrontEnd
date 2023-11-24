@@ -19,17 +19,23 @@ export class GiftService {
     };
 
 
+    /* 
+       The "giftCreated$" variable is defined as the Observable version of the "giftCreatedSource" subject. This allows other parts of the code to subscribe to this Observable and be notified when a gift is created.
+    */
     private giftCreatedSource = new Subject<void>();
     giftCreated$ = this.giftCreatedSource.asObservable();
 
+
+    // This function emits a new event by calling the "next" method on the "giftCreatedSource" subject. 
     giftCreated() {
-      console.log('giftCreated called');
       this.giftCreatedSource.next();
     }
 
 
   constructor(private http : HttpClient) { }
 
+
+  // This sends an HTTP GET request to the API's "/gifts" endpoint using the "http" instance and returns the response from the API. 
   getAllGifts() {
     return this.http.get(`${this.apiUrl}/gifts/`);
   }
