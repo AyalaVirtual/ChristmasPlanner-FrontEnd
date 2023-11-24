@@ -23,8 +23,7 @@ export class DecorationService {
     decorationCreated$ = this.decorationCreatedSource.asObservable();
 
     decorationCreated() {
-      console.log('decorationCreated called');
-      this.decorationCreatedSource.next();
+   this.decorationCreatedSource.next();
     }
 
 
