@@ -20,13 +20,21 @@ export class DecorationItemService {
     };
 
 
+  // This injects the HttpClient module as a dependency. HttpClient is a module provided by Angular that allows the application to send HTTP requests. 
   constructor(private http : HttpClient) { }
 
 
+  /* 
+    This function takes an id parameter of type 'number' and returns an Observable object (which are used to handle asynchronous data streams) that represents the HTTP response from the API. It then sends an HTTP GET request to the specified URL, which includes the id parameter to retrieve the decoration items from the API.
+  */
   getDecorationById(id : number) : Observable<any> {
     return this.http.get(`${this.apiUrl}/decorations/${id}/`);
   }
 
+
+  /* 
+    This method takes an id parameter and a decoration parameter of type 'any' and returns an Observable object. It then sends an HTTP PUT request to the specified URL, which includes the id parameter and the decoration parameter as the request body. This updates decoration items from the API.
+  */
   updateDecoration(id : number, decoration : any) : Observable<any> {
     return this.http.put(`${this.apiUrl}/decorations/${id}/`, decoration, this.httpOptions)
   }
