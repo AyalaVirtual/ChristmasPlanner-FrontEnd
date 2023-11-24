@@ -21,17 +21,19 @@ export class GiftItemComponent implements OnInit {
   giftItem : any;
 
 
-  // Passing in ActivatedRoute makes the URL routes available to the class
+  // ActivatedRoute is a service that provides information about the currently activated route. Passing in ActivatedRoute as a parameter makes the URL routes available to the class. 
   constructor(private giftItemService : GiftItemService, private route: ActivatedRoute) {}
 
   
+  /*
+    This retrieves the ID from the URL route parameters using the "snapshot" of the ActivatedRoute service. It then checks if the ID is not empty. If it is not empty, it calls the "getGiftById" method of the "giftItemService" service, passing the ID as a parameter. This method returns an observable that emits the gift item data. It then uses the "subscribe" method on the observable to handle the emitted gift item data and stores it in the "giftItem" property of the component.
+   */
   ngOnInit() {
     let id = this.route.snapshot.paramMap.get('id') || '';
-    // This checks if gift id is not null or undefined before making the HTTP request 
+    
     if (id) {
       this.giftItemService.getGiftById(+id)
         .subscribe((giftItem) => {
-          // This assigns the retrieved data to the component property 
           this.giftItem = giftItem.data;
       });
     }
