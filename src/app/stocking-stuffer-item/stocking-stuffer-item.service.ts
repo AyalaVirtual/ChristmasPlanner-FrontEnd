@@ -26,7 +26,7 @@ export class StockingStufferItemService {
 
   /* 
     This function takes an id parameter of type 'number' and returns an Observable object (which are used to handle asynchronous data streams) that represents the HTTP response from the API. It then sends an HTTP GET request to the specified URL, which includes the id parameter to retrieve the stocking stuffer items from the API.
-                                    */
+  */
   getStockingStufferById(id : number) : Observable<any> {
     return this.http.get(`${this.apiUrl}/stockingstuffers/${id}/`);
   }
@@ -34,7 +34,7 @@ export class StockingStufferItemService {
 
   /* 
     This method takes an id parameter and a stockingStuffer parameter of type 'any' and returns an Observable object. It then sends an HTTP PUT request to the specified URL, which includes the id parameter and the stockingStuffer parameter as the request body. This updates stocking stuffer items from the API.
-    */
+  */
   updateStockingStuffer(id : number, stockingStuffer : any) : Observable<any> {
     return this.http.put(`${this.apiUrl}/stockingstuffers/${id}/`, stockingStuffer)
   }

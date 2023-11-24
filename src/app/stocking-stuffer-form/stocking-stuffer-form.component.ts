@@ -32,8 +32,6 @@ export class StockingStufferFormComponent {
   
     // This method will be executed when the form is submitted
     onSubmit() {
-      console.log('onSubmit called');
-      console.log(this.stockingStuffer);
       // Retrieve form data from your form controls
       // This accesses the form data via component properties
         const stockingStufferData = {

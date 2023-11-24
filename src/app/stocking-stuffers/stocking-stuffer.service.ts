@@ -9,27 +9,27 @@ import { Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class StockingStuffersService {
-    // This variable points to the Spring Boot API's URL and is where the Angular front-end will send HTTP requests to interact with the back-end 
-    private apiUrl : string = 'http://localhost:9092/api';
+  // This variable points to the Spring Boot API's URL and is where the Angular front-end will send HTTP requests to interact with the back-end 
+  private apiUrl : string = 'http://localhost:9092/api';
     
-    httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json'
-      })
-    };
+  httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json'
+    })
+  };
 
 
-    /* 
-       The "stockingStufferCreated$" variable is defined as the Observable version of the "stockingStufferCreatedSource" subject. This allows other parts of the code to subscribe to this Observable and be notified when a stocking stuffer is created.
-    */
-    private stockingStufferCreatedSource = new Subject<void>();
-    stockingStufferCreated$ = this.stockingStufferCreatedSource.asObservable();
+  /* 
+    The "stockingStufferCreated$" variable is defined as the Observable version of the "stockingStufferCreatedSource" subject. This allows other parts of the code to subscribe to this Observable and be notified when a stocking stuffer is created.
+  */
+  private stockingStufferCreatedSource = new Subject<void>();
+  stockingStufferCreated$ = this.stockingStufferCreatedSource.asObservable();
 
 
-    // This function emits a new event by calling the "next" method on the "stockingStufferCreatedSource" subject. 
-    stockingStufferCreated() {
- this.stockingStufferCreatedSource.next();
-    }  
+  // This function emits a new event by calling the "next" method on the "stockingStufferCreatedSource" subject. 
+  stockingStufferCreated() {
+    this.stockingStufferCreatedSource.next();
+  }  
 
 
   constructor(private http : HttpClient) { }

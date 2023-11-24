@@ -28,12 +28,12 @@ export class DecorationItemComponent implements OnInit {
   
   /*
     This retrieves the ID from the URL route parameters using the "snapshot" of the ActivatedRoute service. It then checks if the ID is not empty. If it is not empty, it calls the "getDecorationById" method of the "decorationItemService" service, passing the ID as a parameter. This method returns an observable that emits the decoration item data. It then uses the "subscribe" method on the observable to handle the emitted decoration item data and stores it in the "decorationItem" property of the component.
-   */
+  */
   ngOnInit() {
     let id = this.route.snapshot.paramMap.get('id') || '';
     
     if (id) {
-    this.decorationItemService.getDecorationById(+id)
+      this.decorationItemService.getDecorationById(+id)
         .subscribe((decorationItem) => {
           this.decorationItem = decorationItem.data;
       });

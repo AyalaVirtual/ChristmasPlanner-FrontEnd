@@ -9,27 +9,27 @@ import { Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class GiftService {
-    // This variable points to the Spring Boot API's URL and is where the Angular front-end will send HTTP requests to interact with the back-end 
-    private apiUrl : string = 'http://localhost:9092/api';
+  // This variable points to the Spring Boot API's URL and is where the Angular front-end will send HTTP requests to interact with the back-end 
+  private apiUrl : string = 'http://localhost:9092/api';
     
-    httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json'
-      })
-    };
+  httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json'
+    })
+  };
 
 
-    /* 
-       The "giftCreated$" variable is defined as the Observable version of the "giftCreatedSource" subject. This allows other parts of the code to subscribe to this Observable and be notified when a gift is created.
-    */
-    private giftCreatedSource = new Subject<void>();
-    giftCreated$ = this.giftCreatedSource.asObservable();
+  /* 
+    The "giftCreated$" variable is defined as the Observable version of the "giftCreatedSource" subject. This allows other parts of the code to subscribe to this Observable and be notified when a gift is created.
+  */
+  private giftCreatedSource = new Subject<void>();
+  giftCreated$ = this.giftCreatedSource.asObservable();
 
 
-    // This function emits a new event by calling the "next" method on the "giftCreatedSource" subject. 
-    giftCreated() {
-      this.giftCreatedSource.next();
-    }
+  // This function emits a new event by calling the "next" method on the "giftCreatedSource" subject. 
+  giftCreated() {
+    this.giftCreatedSource.next();
+  }
 
 
   constructor(private http : HttpClient) { }

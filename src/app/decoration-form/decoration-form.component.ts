@@ -33,8 +33,6 @@ export class DecorationFormComponent {
 
   // This method will be executed when the form is submitted
   onSubmit() {
-    console.log('onSubmit called');
-    console.log(this.decoration);
     // Retrieve form data from your form controls
     // This accesses the form data via component properties
       const decorationData = {

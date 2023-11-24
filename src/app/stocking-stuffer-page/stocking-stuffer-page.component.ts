@@ -20,8 +20,8 @@ export class StockingStufferPageComponent implements OnInit {
   ngOnInit() : void {
     this.stockingStuffersService.getAllStockingStuffers().subscribe(
       ( data : any) => {
-        this.stockingStuffers = data; // Assign the retrieved data to the component property
-        console.log(data);
+        // This assigns the retrieved data to the component property. 
+        this.stockingStuffers = data;
       }
     );
   }

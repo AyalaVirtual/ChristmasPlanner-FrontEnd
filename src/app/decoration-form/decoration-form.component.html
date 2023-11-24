@@ -10,7 +10,7 @@
             <br>
             <textarea [(ngModel)]="decoration.image" [ngModelOptions]="{standalone: true}" placeholder="Enter decoration image URL here" id="image"></textarea>
             <br>
-            <input type="submit" id="submit">
+            <input type="submit" id="submit" [disabled]="decoration.name < 1">
         </form>
     </div>
 </div>
