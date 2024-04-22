@@ -1,8 +1,12 @@
 # Christmas Planner Front-End 
 
+A holiday planning application designed to allow users to find inspiration for DIY Christmas ornaments and decorations, as well as ideas for gifts and stocking stuffers. Users are able to browse and add different ideas for DIY decorations, gifts, and stocking stuffers as they plan for Christmas. 
+
+
+
 <img src="src/assets/images/preview.png" alt="Christmas Planner Preview">
 
-A holiday planning application designed to allow users to find inspiration for DIY Christmas ornaments and decorations, as well as ideas for gifts and stocking stuffers. Users are able to browse and add different ideas for DIY decorations, gifts, and stocking stuffers as they plan for Christmas. 
+
 
 ## Technologies Used
 
