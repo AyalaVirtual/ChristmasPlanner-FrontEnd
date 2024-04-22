@@ -17,7 +17,7 @@ export type Gift = {
   styleUrls: ['./gift-item.component.css']
 })
 export class GiftItemComponent implements OnInit {
-  // This declares a property to store an individual decoration 
+  // This declares a property to store an individual gift 
   giftItem : any;
 
 
