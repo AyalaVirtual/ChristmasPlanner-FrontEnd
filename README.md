@@ -1,6 +1,6 @@
-# Christmas Planner Front-End 
+# Handmade Holidays Hub Front-End 
 
-A holiday planning application designed to allow users to find inspiration for DIY Christmas ornaments and decorations, as well as ideas for gifts and stocking stuffers. Users are able to browse and add different ideas for DIY decorations, gifts, and stocking stuffers as they plan for Christmas. 
+A DIY holiday inspiration application designed to allow users to find ideas and tutorials for DIY Christmas gifts, stocking stuffers, ornaments and decorations. Users are able to browse and add different ideas for DIY decorations, gifts, and stocking stuffers as they plan for Christmas. 
 
 
 
